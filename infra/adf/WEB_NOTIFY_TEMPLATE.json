@@ -1,0 +1,70 @@
+﻿{
+  "_comment": "=== HOW TO USE ===",
+  "_instructions": [
+    "1. Copy WEB_NOTIFY_SUCCESS and WEB_NOTIFY_FAILURE activities into your pipeline JSON",
+    "2. Set the 'dependsOn' of WEB_NOTIFY_SUCCESS to point to your LAST activity with condition Succeeded",
+    "3. Set the 'dependsOn' of WEB_NOTIFY_FAILURE to point to your LAST activity with condition Failed",
+    "4. Replace <<PIPELINE_NAME>> with the actual pipeline name",
+    "5. The URL is read from ADF's Key Vault linked service"
+  ],
+
+  "activities_to_add": [
+    {
+      "name": "WEB_NOTIFY_SUCCESS",
+      "type": "WebActivity",
+      "dependsOn": [
+        {
+          "activity": "<<REPLACE_WITH_LAST_ACTIVITY_NAME>>",
+          "dependencyConditions": ["Succeeded"]
+        }
+      ],
+      "typeProperties": {
+        "method": "POST",
+        "url": {
+          "value": "@{linkedService().logicAppNotifyUrl}",
+          "type": "Expression"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "value": "@concat('{\"pipeline_name\":\"<<PIPELINE_NAME>>\",\"status\":\"Succeeded\",\"run_id\":\"', pipeline().RunId, '\",\"start_time\":\"', string(pipeline().TriggerTime), '\",\"error_message\":\"\"}')",
+          "type": "Expression"
+        }
+      },
+      "policy": {
+        "timeout": "00:01:00",
+        "retry": 1,
+        "retryIntervalInSeconds": 30
+      }
+    },
+    {
+      "name": "WEB_NOTIFY_FAILURE",
+      "type": "WebActivity",
+      "dependsOn": [
+        {
+          "activity": "<<REPLACE_WITH_LAST_ACTIVITY_NAME>>",
+          "dependencyConditions": ["Failed"]
+        }
+      ],
+      "typeProperties": {
+        "method": "POST",
+        "url": {
+          "value": "@{linkedService().logicAppNotifyUrl}",
+          "type": "Expression"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "value": "@concat('{\"pipeline_name\":\"<<PIPELINE_NAME>>\",\"status\":\"Failed\",\"run_id\":\"', pipeline().RunId, '\",\"start_time\":\"', string(pipeline().TriggerTime), '\",\"error_message\":\"', replace(activity('<<REPLACE_WITH_LAST_ACTIVITY_NAME>>').error.message, '\"', '\\\"'), '\"}')",
+          "type": "Expression"
+        }
+      },
+      "policy": {
+        "timeout": "00:01:00",
+        "retry": 0
+      }
+    }
+  ]
+}
