@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "9bfc9fecff2c46999ce2",
+  "position": {
+    "x": 610,
+    "y": 335,
+    "z": 7000,
+    "height": 350,
+    "width": 350,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "CREDENTIAL_STATUS"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.CREDENTIAL_STATUS",
+              "nativeQueryRef": "CREDENTIAL_STATUS",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "Total Candidates"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.Total Candidates",
+              "nativeQueryRef": "Total Candidates"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candidates by Credential Status'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

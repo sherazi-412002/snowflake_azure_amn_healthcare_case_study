@@ -1,0 +1,50 @@
+{
+    "properties":  {
+                       "type":  "DelimitedText",
+                       "annotations":  [
+
+                                       ],
+                       "linkedServiceName":  {
+                                                 "referenceName":  "LS_ADLS_GEN2",
+                                                 "type":  "LinkedServiceReference"
+                                             },
+                       "parameters":  {
+                                          "container":  {
+                                                            "type":  "String",
+                                                            "defaultValue":  "landing"
+                                                        },
+                                          "directory":  {
+                                                            "type":  "String",
+                                                            "defaultValue":  "cms/hospitals"
+                                                        },
+                                          "file_name":  {
+                                                            "type":  "String",
+                                                            "defaultValue":  "hospitals_reference.csv"
+                                                        }
+                                      },
+                       "typeProperties":  {
+                                              "location":  {
+                                                               "type":  "AzureBlobFSLocation",
+                                                               "fileSystem":  {
+                                                                                  "type":  "Expression",
+                                                                                  "value":  "@dataset().container"
+                                                                              },
+                                                               "folderPath":  {
+                                                                                  "type":  "Expression",
+                                                                                  "value":  "@dataset().directory"
+                                                                              },
+                                                               "fileName":  {
+                                                                                "type":  "Expression",
+                                                                                "value":  "@dataset().file_name"
+                                                                            }
+                                                           },
+                                              "columnDelimiter":  ",",
+                                              "escapeChar":  "\\",
+                                              "firstRowAsHeader":  true,
+                                              "quoteChar":  "\""
+                                          },
+                       "schema":  [
+
+                                  ]
+                   }
+}

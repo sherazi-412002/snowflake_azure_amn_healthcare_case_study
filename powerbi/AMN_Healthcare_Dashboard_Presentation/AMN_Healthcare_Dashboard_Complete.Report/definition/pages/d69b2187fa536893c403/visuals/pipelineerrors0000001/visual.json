@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "pipelineerrors0000001",
+  "position": {
+    "x": 852,
+    "y": 278,
+    "z": 16000,
+    "height": 410,
+    "width": 404,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_PIPELINE_RUNS"
+                    }
+                  },
+                  "Property": "STATUS"
+                }
+              },
+              "queryRef": "VW_PIPELINE_RUNS.STATUS",
+              "nativeQueryRef": "STATUS",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_PIPELINE_RUNS"
+                    }
+                  },
+                  "Property": "Pipeline Runs"
+                }
+              },
+              "queryRef": "VW_PIPELINE_RUNS.Pipeline Runs",
+              "nativeQueryRef": "Pipeline Runs"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Pipeline Runs by Status'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

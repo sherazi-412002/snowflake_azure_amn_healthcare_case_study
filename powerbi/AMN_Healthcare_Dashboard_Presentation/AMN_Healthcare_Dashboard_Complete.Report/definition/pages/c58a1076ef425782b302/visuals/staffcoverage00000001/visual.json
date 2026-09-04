@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "staffcoverage00000001",
+  "position": {
+    "x": 24,
+    "y": 278,
+    "z": 14000,
+    "height": 410,
+    "width": 410,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_HOSPITAL"
+                    }
+                  },
+                  "Property": "HOSPITAL_NAME"
+                }
+              },
+              "queryRef": "DIM_HOSPITAL.HOSPITAL_NAME",
+              "nativeQueryRef": "HOSPITAL_NAME",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "Required Staff"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.Required Staff",
+              "nativeQueryRef": "Required Staff"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "Active Placement Count"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.Active Placement Count",
+              "nativeQueryRef": "Active Placement Count"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Required Staff versus Active Placements by Hospital'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "type": "AzureBlobStorage",
+    "annotations": [],
+    "typeProperties": {
+      "authenticationType": "SasUri",
+      "sasUri": {
+        "type": "AzureKeyVaultSecret",
+        "store": {
+          "referenceName": "LS_KEY_VAULT",
+          "type": "LinkedServiceReference"
+        },
+        "secretName": "${blob_stage_sas_secret_name}"
+      }
+    }
+  }
+}

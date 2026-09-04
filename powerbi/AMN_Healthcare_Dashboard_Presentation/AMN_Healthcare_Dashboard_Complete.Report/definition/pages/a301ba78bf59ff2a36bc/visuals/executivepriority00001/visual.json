@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "executivepriority00001",
+  "position": {
+    "x": 528,
+    "y": 284,
+    "z": 15000,
+    "height": 404,
+    "width": 352,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "PRIORITY"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.PRIORITY",
+              "nativeQueryRef": "PRIORITY",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "Total Requests"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.Total Requests",
+              "nativeQueryRef": "Total Requests"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Staffing Requests by Priority'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

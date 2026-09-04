@@ -1,0 +1,35 @@
+{
+    "properties":  {
+                       "type":  "SnowflakeV2Table",
+                       "annotations":  [
+
+                                       ],
+                       "linkedServiceName":  {
+                                                 "referenceName":  "LS_SNOWFLAKE_V2",
+                                                 "type":  "LinkedServiceReference"
+                                             },
+                       "parameters":  {
+                                          "schema_name":  {
+                                                              "type":  "String",
+                                                              "defaultValue":  "RAW"
+                                                          },
+                                          "table_name":  {
+                                                             "type":  "String",
+                                                             "defaultValue":  "HOSPITALS"
+                                                         }
+                                      },
+                       "typeProperties":  {
+                                              "schema":  {
+                                                             "type":  "Expression",
+                                                             "value":  "@dataset().schema_name"
+                                                         },
+                                              "table":  {
+                                                            "type":  "Expression",
+                                                            "value":  "@dataset().table_name"
+                                                        }
+                                          },
+                       "schema":  [
+
+                                  ]
+                   }
+}

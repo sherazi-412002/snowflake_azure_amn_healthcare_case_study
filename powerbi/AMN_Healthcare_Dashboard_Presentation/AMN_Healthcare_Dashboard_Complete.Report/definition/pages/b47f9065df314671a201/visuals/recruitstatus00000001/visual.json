@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "recruitstatus00000001",
+  "position": {
+    "x": 24,
+    "y": 278,
+    "z": 14000,
+    "height": 410,
+    "width": 390,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "CANDIDATE_STATUS"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.CANDIDATE_STATUS",
+              "nativeQueryRef": "CANDIDATE_STATUS",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "Total Candidates"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.Total Candidates",
+              "nativeQueryRef": "Total Candidates"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candidates by Pipeline Status'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

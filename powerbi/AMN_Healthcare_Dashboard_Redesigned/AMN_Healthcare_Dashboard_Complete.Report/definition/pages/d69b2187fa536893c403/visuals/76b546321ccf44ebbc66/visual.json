@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "76b546321ccf44ebbc66",
+  "position": {
+    "x": 20,
+    "y": 325,
+    "z": 8000,
+    "height": 120,
+    "width": 285,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "VW_PIPELINE_RUNS"
+                    }
+                  },
+                  "Property": "Average Runtime Seconds"
+                }
+              },
+              "queryRef": "VW_PIPELINE_RUNS.Average Runtime Seconds",
+              "nativeQueryRef": "Average Runtime Seconds"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "VW_PIPELINE_RUNS"
+                  }
+                },
+                "Property": "Average Runtime Seconds"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "isHidden": true
+}

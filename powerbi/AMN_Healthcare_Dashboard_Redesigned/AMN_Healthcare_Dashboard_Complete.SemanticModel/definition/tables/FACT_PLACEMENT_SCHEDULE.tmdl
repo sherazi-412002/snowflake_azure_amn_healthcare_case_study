@@ -1,0 +1,235 @@
+table FACT_PLACEMENT_SCHEDULE
+	lineageTag: 123c9925-c469-44a3-b0c4-a0c35e7c9fe7
+
+	measure 'Planned Hours' = ```
+			
+			        SUM('FACT_PLACEMENT_SCHEDULE'[PLANNED_HOURS])
+			```
+		lineageTag: 80be1ab0-cfc2-4ed8-b8b9-7cfea076a755
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Worked Hours' = ```
+			
+			        SUM('FACT_PLACEMENT_SCHEDULE'[WORKED_HOURS])
+			```
+		lineageTag: 2ffe6def-9093-44aa-bd4d-2bab0cf0b782
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Overtime Hours' = ```
+			
+			        SUM('FACT_PLACEMENT_SCHEDULE'[OVERTIME_HOURS])
+			```
+		lineageTag: 6cddff74-aff0-4523-a676-72ea6bd544aa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Schedule Completion Rate' = ```
+			
+			        DIVIDE([Worked Hours], [Planned Hours], 0)
+			```
+		lineageTag: e4be38f5-7335-432a-9e2d-dd2a5f3d12e9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SCHEDULE_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: ce2ce992-73ae-4ee8-976e-3e30522fd998
+		summarizeBy: none
+		sourceColumn: SCHEDULE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 39585047-fb81-4340-b1b4-188be2239169
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column REQUEST_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: b73c1066-de23-487b-a39b-6955de1b06c4
+		summarizeBy: none
+		sourceColumn: REQUEST_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: be3f9c32-48e8-4e1b-a058-8b7abd094238
+		summarizeBy: none
+		sourceColumn: HOSPITAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_NAME
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: d6e8f7d0-c8f8-42a6-ac09-f18f0e5e9d62
+		summarizeBy: none
+		sourceColumn: HOSPITAL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column WORK_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: ecca4829-e53b-4d0c-87e0-2ba3b373cdb9
+		summarizeBy: none
+		sourceColumn: WORK_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column SHIFT_TYPE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 938288ff-8182-4cc5-a44a-0bd52704fc20
+		summarizeBy: none
+		sourceColumn: SHIFT_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHIFT_START_TIME
+		dataType: dateTime
+		formatString: Long Time
+		sourceProviderType: time
+		lineageTag: 0f688926-756f-43b9-8a89-ebba8db14e13
+		summarizeBy: none
+		sourceColumn: SHIFT_START_TIME
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column SHIFT_END_TIME
+		dataType: dateTime
+		formatString: Long Time
+		sourceProviderType: time
+		lineageTag: 390a109c-a22f-497a-b4d1-ef40f9dfec18
+		summarizeBy: none
+		sourceColumn: SHIFT_END_TIME
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column PLANNED_HOURS
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 2725b66c-0733-4d54-a488-9fedc2ba0d3d
+		summarizeBy: sum
+		sourceColumn: PLANNED_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WORKED_HOURS
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 46ce1603-c21b-40cb-84bc-090cb105716b
+		summarizeBy: sum
+		sourceColumn: WORKED_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OVERTIME_HOURS
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 022beb6e-f4a7-4520-b5bf-3af151f25638
+		summarizeBy: sum
+		sourceColumn: OVERTIME_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SCHEDULE_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 5a319810-dad5-4008-bb24-fadece0f6123
+		summarizeBy: none
+		sourceColumn: SCHEDULE_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column REQUIRED_ROLE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 565ae878-0cb6-49a1-a38f-b707f403a0df
+		summarizeBy: none
+		sourceColumn: REQUIRED_ROLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: aaed9588-d646-495d-a787-cc38645a333e
+		summarizeBy: none
+		sourceColumn: DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: c50de2de-df5b-41d4-bf05-c638c956fb27
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANDIDATE_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: bc69f9ed-8cec-4892-8402-4c0b20c1ca46
+		summarizeBy: none
+		sourceColumn: CANDIDATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECRUITER_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: f1c01886-9290-4607-b462-59034a1a277e
+		summarizeBy: none
+		sourceColumn: RECRUITER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROFESSION
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 508e010a-89a3-4de8-8e5e-99a6e6a54dbb
+		summarizeBy: none
+		sourceColumn: PROFESSION
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_PLACEMENT_SCHEDULE = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    FACT_PLACEMENT_SCHEDULE_View = MARTS_Schema{[Name="FACT_PLACEMENT_SCHEDULE",Kind="View"]}[Data]
+				in
+				    FACT_PLACEMENT_SCHEDULE_View
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,139 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "name": "ROUTE_LANDING_CSV",
+        "type": "Switch",
+        "dependsOn": [],
+        "userProperties": [],
+        "typeProperties": {
+          "on": {
+            "value": "@concat(toLower(replace(pipeline().parameters.folderPath, '\\\\', '/')), '/', toLower(pipeline().parameters.fileName))",
+            "type": "Expression"
+          },
+          "cases": [
+            {
+              "value": "landing/cms/hospitals/hospitals_reference.csv",
+              "activities": [
+                {
+                  "name": "RUN_HOSPITALS",
+                  "type": "ExecutePipeline",
+                  "dependsOn": [],
+                  "userProperties": [],
+                  "typeProperties": {
+                    "pipeline": {
+                      "referenceName": "PL_COPY_HOSPITALS",
+                      "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                  }
+                }
+              ]
+            },
+            {
+              "value": "landing/hr/candidates/candidates.csv",
+              "activities": [
+                {
+                  "name": "RUN_CANDIDATES",
+                  "type": "ExecutePipeline",
+                  "dependsOn": [],
+                  "userProperties": [],
+                  "typeProperties": {
+                    "pipeline": {
+                      "referenceName": "PL_COPY_CANDIDATES",
+                      "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                  }
+                }
+              ]
+            },
+            {
+              "value": "landing/hr/staffing_requests/staffing_requests.csv",
+              "activities": [
+                {
+                  "name": "RUN_STAFFING_REQUESTS",
+                  "type": "ExecutePipeline",
+                  "dependsOn": [],
+                  "userProperties": [],
+                  "typeProperties": {
+                    "pipeline": {
+                      "referenceName": "PL_COPY_STAFFING_REQUESTS",
+                      "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                  }
+                }
+              ]
+            },
+            {
+              "value": "landing/hr/schedules/schedules.csv",
+              "activities": [
+                {
+                  "name": "RUN_SCHEDULES",
+                  "type": "ExecutePipeline",
+                  "dependsOn": [],
+                  "userProperties": [],
+                  "typeProperties": {
+                    "pipeline": {
+                      "referenceName": "PL_COPY_SCHEDULES",
+                      "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                  }
+                }
+              ]
+            },
+            {
+              "value": "landing/hr/payroll/payroll.csv",
+              "activities": [
+                {
+                  "name": "RUN_PAYROLL",
+                  "type": "ExecutePipeline",
+                  "dependsOn": [],
+                  "userProperties": [],
+                  "typeProperties": {
+                    "pipeline": {
+                      "referenceName": "PL_COPY_PAYROLL",
+                      "type": "PipelineReference"
+                    },
+                    "waitOnCompletion": true
+                  }
+                }
+              ]
+            }
+          ],
+          "defaultActivities": [
+            {
+              "name": "REJECT_UNSUPPORTED_CSV",
+              "type": "Fail",
+              "dependsOn": [],
+              "userProperties": [],
+              "typeProperties": {
+                "message": {
+                  "value": "@concat('No ingestion route is configured for ', pipeline().parameters.folderPath, '/', pipeline().parameters.fileName)",
+                  "type": "Expression"
+                },
+                "errorCode": "UNSUPPORTED_LANDING_FILE"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "parameters": {
+      "folderPath": {
+        "type": "string"
+      },
+      "fileName": {
+        "type": "string"
+      }
+    },
+    "concurrency": 5,
+    "annotations": [
+      "AMN",
+      "event-router",
+      "full-load-backfill"
+    ]
+  }
+}

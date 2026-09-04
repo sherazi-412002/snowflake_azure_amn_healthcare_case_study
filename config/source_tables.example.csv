@@ -1,0 +1,7 @@
+source_system,source_object,source_path,target_schema,target_table,load_type,primary_key_columns,watermark_column,sla_seconds,enabled
+CMS,HOSPITALS,cms/hospitals/hospitals_reference.csv,RAW,HOSPITALS,SNAPSHOT,HOSPITAL_ID,,86400,true
+AMN_HR,CANDIDATES,hr/candidates/candidates.csv,RAW,CANDIDATES,SNAPSHOT,CANDIDATE_ID,,900,true
+AMN_HR,STAFFING_REQUESTS,hr/staffing_requests/staffing_requests.csv,RAW,STAFFING_REQUESTS,SNAPSHOT,REQUEST_ID,,180,true
+AMN_HR,SCHEDULES,hr/schedules/schedules.csv,RAW,SCHEDULES,SNAPSHOT,SCHEDULE_ID,,180,true
+AMN_HR,PAYROLL,hr/payroll/payroll.csv,RAW,PAYROLL,SNAPSHOT,PAYROLL_ID,,900,true
+

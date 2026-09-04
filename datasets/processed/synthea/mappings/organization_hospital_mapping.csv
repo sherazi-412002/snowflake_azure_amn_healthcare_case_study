@@ -1,0 +1,840 @@
+ORGANIZATION_ID,HOSPITAL_ID,HOSPITAL_NAME,CMS_CITY,CMS_STATE,HOSPITAL_TYPE,OWNERSHIP,EMERGENCY_SERVICES,HOSPITAL_RATING
+ORG0001,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0002,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0003,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0004,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0005,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0006,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0007,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0008,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0009,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0010,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0011,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0012,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0013,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0014,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0015,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0016,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0017,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0018,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0019,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0020,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0021,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0022,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0023,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0024,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0025,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0026,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0027,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0028,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0029,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0030,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0031,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0032,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0033,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0034,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0035,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0036,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0037,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0038,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0039,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0040,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0041,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0042,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0043,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0044,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0045,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0046,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0047,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0048,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0049,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0050,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0051,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0052,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0053,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0054,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0055,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0056,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0057,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0058,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0059,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0060,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0061,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0062,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0063,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0064,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0065,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0066,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0067,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0068,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0069,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0070,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0071,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0072,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0073,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0074,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0075,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0076,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0077,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0078,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0079,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0080,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0081,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0082,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0083,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0084,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0085,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0086,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0087,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0088,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0089,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0090,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0091,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0092,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0093,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0094,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0095,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0096,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0097,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0098,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0099,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0100,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0101,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0102,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0103,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0104,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0105,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0106,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0107,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0108,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0109,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0110,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0111,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0112,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0113,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0114,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0115,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0116,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0117,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0118,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0119,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0120,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0121,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0122,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0123,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0124,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0125,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0126,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0127,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0128,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0129,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0130,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0131,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0132,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0133,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0134,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0135,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0136,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0137,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0138,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0139,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0140,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0141,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0142,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0143,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0144,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0145,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0146,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0147,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0148,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0149,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0150,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0151,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0152,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0153,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0154,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0155,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0156,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0157,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0158,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0159,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0160,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0161,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0162,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0163,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0164,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0165,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0166,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0167,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0168,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0169,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0170,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0171,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0172,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0173,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0174,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0175,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0176,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0177,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0178,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0179,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0180,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0181,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0182,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0183,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0184,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0185,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0186,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0187,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0188,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0189,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0190,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0191,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0192,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0193,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0194,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0195,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0196,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0197,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0198,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0199,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0200,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0201,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0202,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0203,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0204,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0205,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0206,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0207,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0208,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0209,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0210,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0211,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0212,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0213,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0214,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0215,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0216,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0217,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0218,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0219,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0220,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0221,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0222,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0223,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0224,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0225,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0226,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0227,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0228,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0229,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0230,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0231,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0232,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0233,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0234,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0235,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0236,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0237,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0238,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0239,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0240,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0241,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0242,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0243,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0244,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0245,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0246,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0247,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0248,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0249,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0250,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0251,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0252,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0253,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0254,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0255,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0256,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0257,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0258,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0259,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0260,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0261,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0262,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0263,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0264,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0265,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0266,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0267,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0268,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0269,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0270,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0271,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0272,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0273,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0274,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0275,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0276,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0277,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0278,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0279,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0280,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0281,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0282,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0283,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0284,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0285,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0286,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0287,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0288,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0289,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0290,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0291,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0292,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0293,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0294,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0295,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0296,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0297,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0298,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0299,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0300,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0301,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0302,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0303,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0304,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0305,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0306,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0307,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0308,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0309,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0310,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0311,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0312,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0313,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0314,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0315,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0316,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0317,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0318,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0319,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0320,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0321,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0322,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0323,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0324,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0325,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0326,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0327,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0328,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0329,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0330,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0331,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0332,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0333,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0334,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0335,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0336,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0337,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0338,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0339,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0340,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0341,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0342,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0343,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0344,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0345,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0346,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0347,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0348,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0349,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0350,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0351,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0352,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0353,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0354,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0355,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0356,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0357,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0358,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0359,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0360,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0361,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0362,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0363,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0364,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0365,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0366,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0367,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0368,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0369,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0370,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0371,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0372,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0373,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0374,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0375,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0376,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0377,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0378,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0379,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0380,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0381,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0382,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0383,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0384,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0385,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0386,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0387,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0388,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0389,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0390,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0391,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0392,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0393,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0394,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0395,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0396,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0397,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0398,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0399,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0400,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0401,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0402,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0403,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0404,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0405,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0406,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0407,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0408,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0409,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0410,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0411,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0412,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0413,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0414,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0415,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0416,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0417,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0418,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0419,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0420,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0421,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0422,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0423,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0424,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0425,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0426,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0427,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0428,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0429,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0430,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0431,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0432,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0433,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0434,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0435,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0436,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0437,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0438,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0439,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0440,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0441,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0442,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0443,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0444,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0445,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0446,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0447,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0448,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0449,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0450,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0451,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0452,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0453,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0454,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0455,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0456,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0457,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0458,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0459,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0460,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0461,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0462,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0463,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0464,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0465,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0466,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0467,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0468,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0469,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0470,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0471,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0472,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0473,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0474,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0475,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0476,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0477,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0478,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0479,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0480,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0481,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0482,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0483,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0484,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0485,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0486,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0487,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0488,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0489,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0490,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0491,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0492,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0493,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0494,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0495,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0496,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0497,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0498,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0499,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0500,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0501,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0502,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0503,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0504,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0505,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0506,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0507,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0508,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0509,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0510,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0511,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0512,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0513,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0514,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0515,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0516,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0517,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0518,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0519,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0520,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0521,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0522,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0523,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0524,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0525,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0526,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0527,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0528,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0529,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0530,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0531,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0532,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0533,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0534,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0535,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0536,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0537,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0538,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0539,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0540,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0541,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0542,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0543,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0544,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0545,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0546,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0547,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0548,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0549,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0550,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0551,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0552,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0553,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0554,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0555,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0556,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0557,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0558,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0559,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0560,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0561,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0562,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0563,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0564,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0565,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0566,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0567,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0568,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0569,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0570,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0571,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0572,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0573,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0574,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0575,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0576,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0577,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0578,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0579,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0580,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0581,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0582,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0583,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0584,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0585,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0586,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0587,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0588,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0589,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0590,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0591,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0592,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0593,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0594,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0595,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0596,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0597,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0598,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0599,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0600,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0601,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0602,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0603,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0604,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0605,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0606,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0607,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0608,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0609,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0610,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0611,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0612,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0613,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0614,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0615,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0616,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0617,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0618,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0619,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0620,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0621,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0622,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0623,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0624,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0625,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0626,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0627,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0628,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0629,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0630,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0631,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0632,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0633,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0634,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0635,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0636,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0637,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0638,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0639,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0640,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0641,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0642,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0643,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0644,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0645,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0646,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0647,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0648,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0649,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0650,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0651,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0652,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0653,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0654,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0655,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0656,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0657,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0658,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0659,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0660,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0661,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0662,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0663,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0664,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0665,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0666,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0667,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0668,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0669,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0670,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0671,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0672,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0673,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0674,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0675,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0676,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0677,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0678,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0679,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0680,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0681,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0682,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0683,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0684,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0685,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0686,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0687,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0688,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0689,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0690,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0691,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0692,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0693,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0694,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0695,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0696,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0697,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0698,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0699,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0700,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0701,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0702,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0703,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0704,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0705,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0706,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0707,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0708,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0709,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0710,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0711,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0712,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0713,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0714,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0715,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0716,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0717,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0718,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0719,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0720,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0721,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0722,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0723,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0724,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0725,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0726,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0727,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0728,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0729,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0730,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0731,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0732,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0733,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0734,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0735,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0736,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0737,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0738,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0739,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0740,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0741,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0742,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0743,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0744,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0745,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0746,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0747,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0748,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0749,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0750,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0751,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0752,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0753,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0754,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0755,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0756,224032,WORCESTER RECOVERY CENTER AND HOSPITAL,WORCESTER,MA,Psychiatric,Government - State,No,Not Available
+ORG0757,220062,ADCARE HOSPITAL OF WORCESTER INC,WORCESTER,MA,Acute Care Hospitals,Proprietary,No,Not Available
+ORG0758,220029,ANNA JAQUES HOSPITAL,NEWBURYPORT,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0759,224013,ARBOUR HOSPITAL,BOSTON,MA,Psychiatric,Proprietary,No,Not Available
+ORG0760,224018,ARBOUR HUMAN RESOURCE INSTITUTE,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0761,224021,ARBOUR-FULLER HOSPITAL,SOUTH ATTLEBORO,MA,Psychiatric,Proprietary,No,Not Available
+ORG0762,221303,ATHOL MEMORIAL HOSPITAL,ATHOL,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0763,220016,BAYSTATE FRANKLIN MEDICAL CENTER,GREENFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0764,220077,BAYSTATE MEDICAL CENTER,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0765,220065,BAYSTATE NOBLE HOSPITAL,WESTFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0766,220030,BAYSTATE WING HOSPITAL,PALMER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0767,22001F,BEDFORD VA MEDICAL CENTER,BEDFORD,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0768,220046,BERKSHIRE MEDICAL CENTER,PITTSFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0769,220108,BETH ISRAEL DEACONESS HOSPITAL - MILTON,MILTON,MA,Acute Care Hospitals,Government - Federal,Yes,4
+ORG0770,220083,BETH ISRAEL DEACONESS HOSPITAL - NEEDHAM,NEEDHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0771,220060,BETH ISRAEL DEACONESS HOSPITAL PLYMOUTH,PLYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0772,220086,BETH ISRAEL DEACONESS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0773,223302,BOSTON CHILDREN'S HOSPITAL,BOSTON,MA,Childrens,Voluntary non-profit - Private,Yes,Not Available
+ORG0774,220031,BOSTON MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0775,220036,BOSTON MEDICAL CENTER-BRIGHTON,BRIGHTON,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0776,224022,BOURNEWOOD HOSPITAL,BROOKLINE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0777,220119,BRIGHAM AND WOMEN FAULKNER HOSPITAL,JAMAICA PLAIN,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0778,220110,BRIGHAM AND WOMEN'S HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0779,220073,BROWN UNIVERSITY HEALTH MORTON HOSPITAL,TAUNTON,MA,Acute Care Hospitals,Proprietary,Yes,1
+ORG0780,220011,CAMBRIDGE HEALTH ALLIANCE,CAMBRIDGE,MA,Acute Care Hospitals,Government - Local,Yes,3
+ORG0781,224031,CAPE COD & ISLANDS COMMUNITY MENTAL HEALTH CENTER,POCASSET,MA,Psychiatric,Government - State,No,Not Available
+ORG0782,220012,CAPE COD HOSPITAL,HYANNIS,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0783,220017,CARNEY HOSPITAL,BOSTON,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0784,220015,"COOLEY DICKINSON HOSPITAL INC,THE",NORTHAMPTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0785,224028,DR JOHN C CORRIGAN MENTAL HEALTH CENTER,FALL RIVER,MA,Psychiatric,Government - State,No,Not Available
+ORG0786,224040,DR SOLOMON CARTER FULLER MENTAL HEALTH CENTER,BOSTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0787,220084,EMERSON HOSPITAL -,W CONCORD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0788,221302,FAIRVIEW HOSPITAL,GREAT BARRINGTON,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0789,220135,FALMOUTH HOSPITAL,FALMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0790,223300,FRANCISCAN CHILDREN'S HOSPITAL & REHAB CENTER,BRIGHTON,MA,Childrens,Voluntary non-profit - Private,No,Not Available
+ORG0791,220111,GOOD SAMARITAN MEDICAL CENTER,BROCKTON,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0792,220095,HEYWOOD HOSPITAL -,GARDNER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0793,220080,HOLY FAMILY HOSPITAL,METHUEN,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0794,220024,HOLYOKE MEDICAL CENTER,HOLYOKE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0795,224045,HOSPITAL FOR BEHAVIORAL MEDICINE,WORCESTER,MA,Psychiatric,Proprietary,No,Not Available
+ORG0796,220171,"LAHEY HOSPITAL & MEDICAL CENTER, BURLINGTON",BURLINGTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0797,220063,LOWELL GENERAL HOSPITAL,LOWELL,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0798,221300,MARTHA'S VINEYARD HOSPITAL INC,OAK BLUFFS,MA,Critical Access Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0799,220075,MASSACHUSETTS EYE AND EAR INFIRMARY -,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,Not Available
+ORG0800,220071,MASSACHUSETTS GENERAL HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0801,224007,MCLEAN HOSPITAL CORPORATION,BELMONT,MA,Psychiatric,Voluntary non-profit - Private,No,Not Available
+ORG0802,220070,MELROSEWAKEFIELD HEALTHCARE,MELROSE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0803,220066,MERCY MEDICAL CTR,SPRINGFIELD,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0804,220010,MERRIMACK HEALTH LAWRENCE HOSPITAL,LAWRENCE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0805,220175,METROWEST MEDICAL CENTER,FRAMINGHAM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,1
+ORG0806,220090,MILFORD REGIONAL MEDICAL CENTER,MILFORD,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,4
+ORG0807,224046,MIRAVISTA BEHAVIORAL HEALTH CENTER,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0808,220002,MOUNT AUBURN HOSPITAL,CAMBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0809,220177,NANTUCKET COTTAGE HOSPITAL,NANTUCKET,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0810,220098,NASHOBA VALLEY MEDICAL CENTER,AYER,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0811,220088,NEW ENGLAND BAPTIST HOSPITAL,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,No,5
+ORG0812,220101,NEWTON-WELLESLEY HOSPITAL,NEWTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0813,221304,NORTH ADAMS REGIONAL HOSPITAL CORPORATION,NORTH ADAMS,MA,Critical Access Hospitals,Government - Federal,Yes,Not Available
+ORG0814,220035,NORTH SHORE MEDICAL CENTER -,SALEM,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,5
+ORG0815,22009F,NORTHAMPTON VA MEDICAL CENTER,LEEDS,MA,Acute Care - Veterans Administration,Veterans Health Administration,No,Not Available
+ORG0816,220033,NORTHEAST HOSPITAL CORPORATION,BEVERLY,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0817,220126,NORWOOD HOSPITAL,NORWOOD,MA,Acute Care Hospitals,Proprietary,Yes,Not Available
+ORG0818,220020,SAINT ANNE'S HOSPITAL,FALL RIVER,MA,Acute Care Hospitals,Proprietary,Yes,3
+ORG0819,220052,SIGNATURE HEALTHCARE BROCKTON HOSPITAL,BROCKTON,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0820,220100,SOUTH SHORE HOSPITAL,SOUTH WEYMOUTH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0821,224041,SOUTHCOAST BEHAVIORAL HEALTH,DARTMOUTH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0822,220074,SOUTHCOAST HOSPITALS GROUP,FALL RIVER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,4
+ORG0823,220176,ST VINCENT HOSPITAL,WORCESTER,MA,Acute Care Hospitals,Proprietary,Yes,2
+ORG0824,220008,STURDY MEMORIAL HOSPITAL,ATTLEBORO,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0825,224043,TARAVISTA BEHAVIORAL HEALTH CENTER,DEVENS,MA,Psychiatric,Proprietary,No,Not Available
+ORG0826,224001,TAUNTON STATE HOSPITAL,TAUNTON,MA,Psychiatric,Government - State,No,Not Available
+ORG0827,223304,THE SHRINERS' HOSPITAL FOR CHILDREN - BOSTON,BOSTON,MA,Childrens,Proprietary,No,Not Available
+ORG0828,220116,TUFTS MEDICAL CENTER,BOSTON,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0829,220019,UMASS MEMORIAL HEALTH - HARRINGTON HOSPITAL,SOUTHBRIDGE,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0830,220001,UMASS MEMORIAL HEALTHALLIANCE HOSPITALS,LEOMINSTER,MA,Acute Care Hospitals,Voluntary non-profit - Other,Yes,3
+ORG0831,220049,UMASS MEMORIAL HEALTHCARE-MARLBOROUGH HOSPITAL,MARLBOROUGH,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,2
+ORG0832,220163,UMASS MEMORIAL MEDICAL CENTER/UNIVERSITY CAMPUS,WORCESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3
+ORG0833,22010F,VA BOSTON HEALTHCARE SYSTEM - JAMAICA PLAIN,JAMAICA PLAIN,MA,Acute Care - Veterans Administration,Veterans Health Administration,Yes,4
+ORG0834,224047,VALLEY SPRINGS BEHAVIORAL HEALTH HOSPITAL,HOLYOKE,MA,Psychiatric,Proprietary,No,Not Available
+ORG0835,224038,"WALDEN BEHAVIORAL CARE, LLC",DEDHAM,MA,Psychiatric,Government - Federal,No,Not Available
+ORG0836,224044,WESTBOROUGH BEHAVIORAL HEALTHCARE HOSPITAL LLC,WESTBOROUGH,MA,Psychiatric,Proprietary,No,Not Available
+ORG0837,224023,WESTWOOD PEMBROKE HEALTH SYSTEMS,WESTWOOD,MA,Psychiatric,Proprietary,Yes,Not Available
+ORG0838,224039,WHITTIER PAVILION,HAVERHILL,MA,Psychiatric,Proprietary,No,Not Available
+ORG0839,220105,WINCHESTER HOSPITAL,WINCHESTER,MA,Acute Care Hospitals,Voluntary non-profit - Private,Yes,3

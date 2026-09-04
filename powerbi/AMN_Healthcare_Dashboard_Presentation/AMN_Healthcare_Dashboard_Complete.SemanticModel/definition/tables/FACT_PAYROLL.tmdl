@@ -1,0 +1,241 @@
+table FACT_PAYROLL
+	lineageTag: 8dfd6321-3d5c-4916-87f4-5ce39293d7a0
+
+	measure 'Gross Payroll' = ```
+				
+			        SUM('FACT_PAYROLL'[GROSS_PAY])
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$0.00
+		lineageTag: d4281d31-7453-4de2-95d4-937695b5997e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Payroll' = ```
+				
+			        SUM('FACT_PAYROLL'[NET_PAY])
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$0.00
+		lineageTag: 32a66585-6330-4485-b18d-b60a74b40624
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Overtime Pay' = ```
+				
+			        SUM('FACT_PAYROLL'[OVERTIME_PAY])
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$0.00
+		lineageTag: 587db8f5-2999-48eb-93cb-5db6549b636a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Hourly Pay' = ```
+				
+			        AVERAGE('FACT_PAYROLL'[HOURLY_PAY_RATE])
+			```
+		formatString: \$#,0.00
+		lineageTag: d0901f45-ad1b-447f-969b-bf9c6535d0f6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Benefits Deductions' = SUM('FACT_PAYROLL'[BENEFITS_DEDUCTION])
+		formatString: \$#,0.00;(\$#,0.00);\$0.00
+		lineageTag: b6be0c36-4e0c-4c66-8327-2ef24e1fd450
+
+	measure 'Bonus Amount' = SUM('FACT_PAYROLL'[BONUS])
+		formatString: \$#,0.00;(\$#,0.00);\$0.00
+		lineageTag: 4d7f5904-9849-499c-a17b-505ea9c55b72
+
+	measure 'Payroll Overtime Hours' = SUM('FACT_PAYROLL'[OVERTIME_HOURS])
+		formatString: #,0.0
+		lineageTag: b45ea7a7-bafa-434d-ab15-023374be1eef
+
+	column PAYROLL_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 0402c62a-f3c6-4e21-8b7d-f06d1cfa87d5
+		summarizeBy: none
+		sourceColumn: PAYROLL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 9e222f31-edc0-449c-9507-abf573aaf329
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 8f0dec9e-8bdd-4698-bc24-63e1a3bfbd24
+		summarizeBy: none
+		sourceColumn: HOSPITAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_NAME
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: b76e6510-09a8-4fd3-aa09-d3b66dcb8c05
+		summarizeBy: none
+		sourceColumn: HOSPITAL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYROLL_MONTH
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 40c06840-f084-4158-a7c5-85862b9ac149
+		summarizeBy: none
+		sourceColumn: PAYROLL_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+	column PAYROLL_MONTH_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: c4ac6b60-5a0e-470d-8db2-6b64dc4fc44b
+		summarizeBy: none
+		sourceColumn: PAYROLL_MONTH_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column REGULAR_HOURS
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: a270e900-f906-4ac9-ab78-ed09319df1f5
+		summarizeBy: sum
+		sourceColumn: REGULAR_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OVERTIME_HOURS
+		dataType: double
+		sourceProviderType: decimal(10, 2)
+		lineageTag: 335d096d-e572-477b-8346-65660312f787
+		summarizeBy: sum
+		sourceColumn: OVERTIME_HOURS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HOURLY_PAY_RATE
+		dataType: double
+		sourceProviderType: decimal(12, 2)
+		lineageTag: 2263400e-da58-48ce-ba97-1b464f93fbb9
+		summarizeBy: sum
+		sourceColumn: HOURLY_PAY_RATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column REGULAR_PAY
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: 957fcd28-53e7-4c35-9375-d71407def481
+		summarizeBy: sum
+		sourceColumn: REGULAR_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OVERTIME_PAY
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: eb24672d-4185-4bee-95d2-51705ef2e931
+		summarizeBy: sum
+		sourceColumn: OVERTIME_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BONUS
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: 5152f174-4244-4fd6-bba8-b34ecd3e39bf
+		summarizeBy: sum
+		sourceColumn: BONUS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column GROSS_PAY
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: ac2427b6-d31e-40c7-a384-e3906d64c919
+		summarizeBy: sum
+		sourceColumn: GROSS_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TAX_AMOUNT
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: de4cdcbb-2441-4f5d-a35d-c91abefcc1d7
+		summarizeBy: sum
+		sourceColumn: TAX_AMOUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BENEFITS_DEDUCTION
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: 61c659c6-8c6c-4234-9d69-5668c2d5cc44
+		summarizeBy: sum
+		sourceColumn: BENEFITS_DEDUCTION
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NET_PAY
+		dataType: double
+		sourceProviderType: decimal(14, 2)
+		lineageTag: 4e2e35b4-f9e1-4bac-b948-bd7a3162b1d1
+		summarizeBy: sum
+		sourceColumn: NET_PAY
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PAYMENT_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: e0ca2bdb-4af2-4cbe-82eb-03c32eadc6ff
+		summarizeBy: none
+		sourceColumn: PAYMENT_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FACT_PAYROLL = m
+		mode: directQuery
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    FACT_PAYROLL_View = MARTS_Schema{[Name="FACT_PAYROLL",Kind="View"]}[Data]
+				in
+				    FACT_PAYROLL_View
+
+	annotation PBI_ResultType = Table
+

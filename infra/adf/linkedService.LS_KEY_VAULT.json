@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "type": "AzureKeyVault",
+    "annotations": [],
+    "typeProperties": {
+      "baseUrl": "${key_vault_uri}"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+subscription_id = "00000000-0000-0000-0000-000000000000"
+snowflake_account_identifier = "yourorg-youraccount"
+snowflake_host               = "yourorg-youraccount.snowflakecomputing.com"
+project_name    = "amn"
+environment     = "dev"
+location        = "eastus2"
+
+# Keep these enabled for the first developer deployment. Production should use
+# private endpoints, private DNS, and an approved network path before disabling.
+data_factory_public_network_enabled      = true
+storage_public_network_access_enabled    = true
+storage_shared_access_key_enabled         = true
+key_vault_public_network_access_enabled  = true
+
+additional_tags = {
+  owner       = "data-platform-team"
+  cost_center = "learning"
+}
+# Optional: receive Azure Monitor alerts for incremental pipeline failures,
+# trigger failures, and runs exceeding the five-minute SLA.
+monitor_alert_email                   = null
+incremental_monitoring_alerts_enabled = true
+
+# Keep event triggers disabled during the first deployment. Enable only after
+# uploading one canonical test file at a time and confirming the routed run.
+metadata_ingest_trigger_activated = false
+landing_csv_trigger_activated     = false

@@ -1,0 +1,244 @@
+{
+    "properties":  {
+                       "concurrency":  1,
+                       "activities":  [
+                                          {
+                                              "name":  "LOOKUP_ENABLED_CONFIG",
+                                              "type":  "Lookup",
+                                              "dependsOn":  [
+
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "userProperties":  [
+
+                                                                 ],
+                                              "typeProperties":  {
+                                                                     "source":  {
+                                                                                    "type":  "SnowflakeV2Source",
+                                                                                    "query":  "SELECT SOURCE_SYSTEM, SOURCE_OBJECT, SOURCE_PATH, TARGET_SCHEMA, TARGET_TABLE, LOAD_TYPE, PRIMARY_KEY_COLUMNS, WATERMARK_COLUMN, SLA_SECONDS FROM AMN_DEV.CONTROL.INGESTION_CONFIG WHERE ENABLED = TRUE ORDER BY SOURCE_SYSTEM, SOURCE_OBJECT",
+                                                                                    "exportSettings":  {
+                                                                                                           "type":  "SnowflakeExportCopyCommand"
+                                                                                                       }
+                                                                                },
+                                                                     "dataset":  {
+                                                                                     "referenceName":  "DS_SNOWFLAKE_CONFIG",
+                                                                                     "type":  "DatasetReference"
+                                                                                 },
+                                                                     "firstRowOnly":  false
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "FOR_EACH_ENABLED_CONFIG",
+                                              "type":  "ForEach",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "LOOKUP_ENABLED_CONFIG",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "userProperties":  [
+
+                                                                 ],
+                                              "typeProperties":  {
+                                                                     "items":  {
+                                                                                   "value":  "@activity(\u0027LOOKUP_ENABLED_CONFIG\u0027).output.value",
+                                                                                   "type":  "Expression"
+                                                                               },
+                                                                     "isSequential":  false,
+                                                                     "batchCount":  5,
+                                                                     "activities":  [
+                                                                                        {
+                                                                                            "name":  "ROUTE_CONFIGURED_OBJECT",
+                                                                                            "type":  "Switch",
+                                                                                            "dependsOn":  [
+
+                                                                                                          ],
+                                                                                            "userProperties":  [
+
+                                                                                                               ],
+                                                                                            "typeProperties":  {
+                                                                                                                   "on":  {
+                                                                                                                              "value":  "@item().SOURCE_OBJECT",
+                                                                                                                              "type":  "Expression"
+                                                                                                                          },
+                                                                                                                   "cases":  [
+                                                                                                                                 {
+                                                                                                                                     "value":  "HOSPITALS",
+                                                                                                                                     "activities":  [
+                                                                                                                                                        {
+                                                                                                                                                            "name":  "RUN_HOSPITALS",
+                                                                                                                                                            "type":  "ExecutePipeline",
+                                                                                                                                                            "dependsOn":  [
+
+                                                                                                                                                                          ],
+                                                                                                                                                            "policy":  {
+                                                                                                                                                                           "secureInput":  false
+                                                                                                                                                                       },
+                                                                                                                                                            "userProperties":  [
+
+                                                                                                                                                                               ],
+                                                                                                                                                            "typeProperties":  {
+                                                                                                                                                                                   "pipeline":  {
+                                                                                                                                                                                                    "referenceName":  "PL_COPY_HOSPITALS",
+                                                                                                                                                                                                    "type":  "PipelineReference"
+                                                                                                                                                                                                },
+                                                                                                                                                                                   "waitOnCompletion":  true,
+                                                                                                                                                                                   "parameters":  {
+
+                                                                                                                                                                                                  }
+                                                                                                                                                                               }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "value":  "STAFFING_REQUESTS",
+                                                                                                                                     "activities":  [
+                                                                                                                                                        {
+                                                                                                                                                            "name":  "RUN_STAFFING_REQUESTS",
+                                                                                                                                                            "type":  "ExecutePipeline",
+                                                                                                                                                            "dependsOn":  [
+
+                                                                                                                                                                          ],
+                                                                                                                                                            "policy":  {
+                                                                                                                                                                           "secureInput":  false
+                                                                                                                                                                       },
+                                                                                                                                                            "userProperties":  [
+
+                                                                                                                                                                               ],
+                                                                                                                                                            "typeProperties":  {
+                                                                                                                                                                                   "pipeline":  {
+                                                                                                                                                                                                    "referenceName":  "PL_COPY_STAFFING_REQUESTS",
+                                                                                                                                                                                                    "type":  "PipelineReference"
+                                                                                                                                                                                                },
+                                                                                                                                                                                   "waitOnCompletion":  true,
+                                                                                                                                                                                   "parameters":  {
+
+                                                                                                                                                                                                  }
+                                                                                                                                                                               }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "value":  "CANDIDATES",
+                                                                                                                                     "activities":  [
+                                                                                                                                                        {
+                                                                                                                                                            "name":  "RUN_CANDIDATES",
+                                                                                                                                                            "type":  "ExecutePipeline",
+                                                                                                                                                            "dependsOn":  [
+
+                                                                                                                                                                          ],
+                                                                                                                                                            "policy":  {
+                                                                                                                                                                           "secureInput":  false
+                                                                                                                                                                       },
+                                                                                                                                                            "userProperties":  [
+
+                                                                                                                                                                               ],
+                                                                                                                                                            "typeProperties":  {
+                                                                                                                                                                                   "pipeline":  {
+                                                                                                                                                                                                    "referenceName":  "PL_COPY_CANDIDATES",
+                                                                                                                                                                                                    "type":  "PipelineReference"
+                                                                                                                                                                                                },
+                                                                                                                                                                                   "waitOnCompletion":  true,
+                                                                                                                                                                                   "parameters":  {
+
+                                                                                                                                                                                                  }
+                                                                                                                                                                               }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "value":  "SCHEDULES",
+                                                                                                                                     "activities":  [
+                                                                                                                                                        {
+                                                                                                                                                            "name":  "RUN_SCHEDULES",
+                                                                                                                                                            "type":  "ExecutePipeline",
+                                                                                                                                                            "dependsOn":  [
+
+                                                                                                                                                                          ],
+                                                                                                                                                            "policy":  {
+                                                                                                                                                                           "secureInput":  false
+                                                                                                                                                                       },
+                                                                                                                                                            "userProperties":  [
+
+                                                                                                                                                                               ],
+                                                                                                                                                            "typeProperties":  {
+                                                                                                                                                                                   "pipeline":  {
+                                                                                                                                                                                                    "referenceName":  "PL_COPY_SCHEDULES",
+                                                                                                                                                                                                    "type":  "PipelineReference"
+                                                                                                                                                                                                },
+                                                                                                                                                                                   "waitOnCompletion":  true,
+                                                                                                                                                                                   "parameters":  {
+
+                                                                                                                                                                                                  }
+                                                                                                                                                                               }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                 },
+                                                                                                                                 {
+                                                                                                                                     "value":  "PAYROLL",
+                                                                                                                                     "activities":  [
+                                                                                                                                                        {
+                                                                                                                                                            "name":  "RUN_PAYROLL",
+                                                                                                                                                            "type":  "ExecutePipeline",
+                                                                                                                                                            "dependsOn":  [
+
+                                                                                                                                                                          ],
+                                                                                                                                                            "policy":  {
+                                                                                                                                                                           "secureInput":  false
+                                                                                                                                                                       },
+                                                                                                                                                            "userProperties":  [
+
+                                                                                                                                                                               ],
+                                                                                                                                                            "typeProperties":  {
+                                                                                                                                                                                   "pipeline":  {
+                                                                                                                                                                                                    "referenceName":  "PL_COPY_PAYROLL",
+                                                                                                                                                                                                    "type":  "PipelineReference"
+                                                                                                                                                                                                },
+                                                                                                                                                                                   "waitOnCompletion":  true,
+                                                                                                                                                                                   "parameters":  {
+
+                                                                                                                                                                                                  }
+                                                                                                                                                                               }
+                                                                                                                                                        }
+                                                                                                                                                    ]
+                                                                                                                                 }
+                                                                                                                             ],
+                                                                                                                   "defaultActivities":  [
+                                                                                                                                             {
+                                                                                                                                                 "name":  "FAIL_UNSUPPORTED_OBJECT",
+                                                                                                                                                 "type":  "Fail",
+                                                                                                                                                 "dependsOn":  [
+
+                                                                                                                                                               ],
+                                                                                                                                                 "userProperties":  [
+
+                                                                                                                                                                    ],
+                                                                                                                                                 "typeProperties":  {
+                                                                                                                                                                        "message":  {
+                                                                                                                                                                                        "value":  "@concat(\u0027No child pipeline is registered for \u0027, item().SOURCE_OBJECT)",
+                                                                                                                                                                                        "type":  "Expression"
+                                                                                                                                                                                    },
+                                                                                                                                                                        "errorCode":  "UNSUPPORTED_SOURCE_OBJECT"
+                                                                                                                                                                    }
+                                                                                                                                             }
+                                                                                                                                         ]
+                                                                                                               }
+                                                                                        }
+                                                                                    ]
+                                                                 }
+                                          }
+                                      ],
+                       "annotations":  [
+
+                                       ],
+                       "folder":  null
+                   }
+}

@@ -1,0 +1,19 @@
+{
+    "properties":  {
+                       "type":  "SnowflakeV2Table",
+                       "annotations":  [
+
+                                       ],
+                       "linkedServiceName":  {
+                                                 "referenceName":  "LS_SNOWFLAKE_V2",
+                                                 "type":  "LinkedServiceReference"
+                                             },
+                       "typeProperties":  {
+                                              "schema":  "CONTROL",
+                                              "table":  "INGESTION_CONFIG"
+                                          },
+                       "schema":  [
+
+                                  ]
+                   }
+}

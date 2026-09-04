@@ -1,0 +1,10 @@
+{
+  "properties": {
+    "type": "AzureBlobFS",
+    "annotations": [],
+    "typeProperties": {
+      "url": "${data_lake_dfs_endpoint}",
+      "authenticationType": "ManagedIdentity"
+    }
+  }
+}

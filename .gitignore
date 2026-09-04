@@ -1,0 +1,31 @@
+# Secrets & credentials
+.env
+*.env
+backend.hcl
+terraform.tfvars
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive config
+.agents/mcp_config.json
+
+# Temp & system files
+.codex-write-test.tmp
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+
+# Python virtual envs
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# Node
+node_modules/

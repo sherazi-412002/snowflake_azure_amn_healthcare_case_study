@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "type": "SnowflakeV2",
+    "version": "1.1",
+    "annotations": [],
+    "typeProperties": {
+      "accountIdentifier": "${snowflake_account_identifier}",
+      "host": "${snowflake_host}",
+      "database": "${snowflake_database}",
+      "warehouse": "${snowflake_warehouse}",
+      "authenticationType": "Basic",
+      "user": "${snowflake_user}",
+      "password": {
+        "type": "AzureKeyVaultSecret",
+        "store": {
+          "referenceName": "LS_KEY_VAULT",
+          "type": "LinkedServiceReference"
+        },
+        "secretName": "${snowflake_password_secret_name}"
+      }
+    }
+  }
+}

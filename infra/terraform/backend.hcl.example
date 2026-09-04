@@ -1,0 +1,6 @@
+resource_group_name  = "rg-amn-tfstate"
+storage_account_name = "stamntfstateunique"
+container_name       = "tfstate"
+key                  = "amn/dev/azure.tfstate"
+use_azuread_auth     = true
+

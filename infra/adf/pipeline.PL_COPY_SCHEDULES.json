@@ -1,0 +1,429 @@
+{
+    "properties":  {
+                       "activities":  [
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "AUDIT_SCHEDULES_STARTED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "inputs":  [
+                                                             {
+                                                                 "parameters":  {
+                                                                                    "container":  "landing",
+                                                                                    "directory":  "hr/schedules",
+                                                                                    "file_name":  "schedules.csv"
+                                                                                },
+                                                                 "referenceName":  "DS_ADLS_CSV",
+                                                                 "type":  "DatasetReference"
+                                                             }
+                                                         ],
+                                              "name":  "COPY_SCHEDULES_TO_RAW",
+                                              "outputs":  [
+                                                              {
+                                                                  "parameters":  {
+                                                                                     "schema_name":  "RAW",
+                                                                                     "table_name":  "SCHEDULES"
+                                                                                 },
+                                                                  "referenceName":  "DS_SNOWFLAKE_TABLE",
+                                                                  "type":  "DatasetReference"
+                                                              }
+                                                          ],
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Copy",
+                                              "typeProperties":  {
+                                                                     "enableStaging":  true,
+                                                                     "sink":  {
+                                                                                  "importSettings":  {
+                                                                                                         "type":  "SnowflakeImportCopyCommand"
+                                                                                                     },
+                                                                                  "type":  "SnowflakeV2Sink"
+                                                                              },
+                                                                     "source":  {
+                                                                                    "formatSettings":  {
+                                                                                                           "type":  "DelimitedTextReadSettings"
+                                                                                                       },
+                                                                                    "storeSettings":  {
+                                                                                                          "enablePartitionDiscovery":  false,
+                                                                                                          "recursive":  true,
+                                                                                                          "type":  "AzureBlobFSReadSettings"
+                                                                                                      },
+                                                                                    "type":  "DelimitedTextSource"
+                                                                                },
+                                                                     "stagingSettings":  {
+                                                                                             "linkedServiceName":  {
+                                                                                                                       "referenceName":  "LS_BLOB_STAGE_SAS",
+                                                                                                                       "type":  "LinkedServiceReference"
+                                                                                                                   },
+                                                                                             "path":  "checkpoint/snowflake-stage/schedules"
+                                                                                         },
+                                                                     "translator":  {
+                                                                                        "mappings":  [
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SCHEDULE_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "schedule_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "EMPLOYEE_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "employee_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUEST_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "request_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_NAME",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_name",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "WORK_DATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "work_date",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SHIFT_TYPE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "shift_type",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SHIFT_START_TIME",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "shift_start_time",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SHIFT_END_TIME",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "shift_end_time",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "PLANNED_HOURS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "planned_hours",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "WORKED_HOURS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "worked_hours",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "OVERTIME_HOURS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "overtime_hours",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SCHEDULE_STATUS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "schedule_status",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "type":  "TabularTranslator",
+                                                                                        "typeConversion":  true,
+                                                                                        "typeConversionSettings":  {
+                                                                                                                       "allowDataTruncation":  true,
+                                                                                                                       "treatBooleanAsNumber":  false
+                                                                                                                   }
+                                                                                    }
+                                                                 }
+                                          },
+                                          {
+                                              "dependsOn":  [
+
+                                                            ],
+                                              "name":  "SET_BATCH_ID",
+                                              "policy":  {
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "type":  "SetVariable",
+                                              "typeProperties":  {
+                                                                     "value":  {
+                                                                                   "type":  "Expression",
+                                                                                   "value":  "@guid()"
+                                                                               },
+                                                                     "variableName":  "batch_id"
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "SET_BATCH_ID",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_SCHEDULES_STARTED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\n  \u0027CALL AMN_DEV.CONTROL.START_HR_RUN(\u0027\u0027\u0027,\n  pipeline().RunId,\n  \u0027\u0027\u0027,\u0027\u0027\u0027,\n  variables(\u0027batch_id\u0027),\n  \u0027\u0027\u0027,\u0027\u0027SCHEDULES\u0027\u0027);\u0027\n)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_SCHEDULES_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "MERGE_SCHEDULES_TO_CURATED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  "CALL AMN_DEV.CURATED.MERGE_SCHEDULES();",
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_SCHEDULES_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_SCHEDULES_SUCCEEDED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\n  \u0027CALL AMN_DEV.CONTROL.SUCCEED_HR_RUN(\u0027\u0027\u0027,\n  pipeline().RunId,\n  \u0027\u0027\u0027,\u0027\u0027SCHEDULES\u0027\u0027,\u0027,\n  string(activity(\u0027COPY_SCHEDULES_TO_RAW\u0027).output.rowsRead),\n  \u0027,\u0027,\n  string(activity(\u0027COPY_SCHEDULES_TO_RAW\u0027).output.rowsCopied),\n  \u0027);\u0027\n)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_SCHEDULES_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_COPY_SCHEDULES_FAILED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HR_RUN(\u0027\u0027\u0027,pipeline().RunId,\u0027\u0027\u0027,\u0027\u0027SCHEDULES\u0027\u0027,\u0027\u0027COPY_FAILED\u0027\u0027,\u0027\u0027ADF Copy activity failed\u0027\u0027);\u0027)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_SCHEDULES_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_MERGE_SCHEDULES_FAILED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HR_RUN(\u0027\u0027\u0027,pipeline().RunId,\u0027\u0027\u0027,\u0027\u0027SCHEDULES\u0027\u0027,\u0027\u0027MERGE_FAILED\u0027\u0027,\u0027\u0027Snowflake merge activity failed\u0027\u0027);\u0027)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          }
+                                      ],
+                       "annotations":  [
+
+                                       ],
+                       "variables":  {
+                                         "batch_id":  {
+                                                          "type":  "String"
+                                                      }
+                                     }
+                   }
+}

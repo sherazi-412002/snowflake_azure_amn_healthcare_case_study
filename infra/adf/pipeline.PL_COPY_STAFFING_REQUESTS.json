@@ -1,0 +1,492 @@
+{
+    "properties":  {
+                       "activities":  [
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "AUDIT_STAFFING_REQUESTS_STARTED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "inputs":  [
+                                                             {
+                                                                 "parameters":  {
+                                                                                    "container":  "landing",
+                                                                                    "directory":  "hr/staffing_requests",
+                                                                                    "file_name":  "staffing_requests.csv"
+                                                                                },
+                                                                 "referenceName":  "DS_ADLS_CSV",
+                                                                 "type":  "DatasetReference"
+                                                             }
+                                                         ],
+                                              "name":  "COPY_STAFFING_REQUESTS_TO_RAW",
+                                              "outputs":  [
+                                                              {
+                                                                  "parameters":  {
+                                                                                     "schema_name":  "RAW",
+                                                                                     "table_name":  "STAFFING_REQUESTS"
+                                                                                 },
+                                                                  "referenceName":  "DS_SNOWFLAKE_TABLE",
+                                                                  "type":  "DatasetReference"
+                                                              }
+                                                          ],
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Copy",
+                                              "typeProperties":  {
+                                                                     "enableStaging":  true,
+                                                                     "sink":  {
+                                                                                  "importSettings":  {
+                                                                                                         "type":  "SnowflakeImportCopyCommand"
+                                                                                                     },
+                                                                                  "type":  "SnowflakeV2Sink"
+                                                                              },
+                                                                     "source":  {
+                                                                                    "formatSettings":  {
+                                                                                                           "type":  "DelimitedTextReadSettings"
+                                                                                                       },
+                                                                                    "storeSettings":  {
+                                                                                                          "enablePartitionDiscovery":  false,
+                                                                                                          "recursive":  true,
+                                                                                                          "type":  "AzureBlobFSReadSettings"
+                                                                                                      },
+                                                                                    "type":  "DelimitedTextSource"
+                                                                                },
+                                                                     "stagingSettings":  {
+                                                                                             "linkedServiceName":  {
+                                                                                                                       "referenceName":  "LS_BLOB_STAGE_SAS",
+                                                                                                                       "type":  "LinkedServiceReference"
+                                                                                                                   },
+                                                                                             "path":  "checkpoint/snowflake-stage/staffing_requests"
+                                                                                         },
+                                                                     "translator":  {
+                                                                                        "mappings":  [
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUEST_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "request_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_NAME",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_name",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "CITY",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "city",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "STATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "state",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUIRED_ROLE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "required_role",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "DEPARTMENT",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "department",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "EMPLOYMENT_TYPE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "employment_type",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "SHIFT_PREFERENCE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "shift_preference",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUIRED_STAFF",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "required_staff",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "FILLED_STAFF",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "filled_staff",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "OPEN_POSITIONS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "open_positions",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "PRIORITY",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "priority",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUEST_STATUS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "request_status",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "REQUEST_DATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "request_date",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "ASSIGNMENT_START_DATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "assignment_start_date",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "ASSIGNMENT_END_DATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "assignment_end_date",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "DURATION_WEEKS",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "duration_weeks",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOURLY_BILL_RATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      },
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hourly_bill_rate",
+                                                                                                                            "type":  "String"
+                                                                                                                        }
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "type":  "TabularTranslator",
+                                                                                        "typeConversion":  true,
+                                                                                        "typeConversionSettings":  {
+                                                                                                                       "allowDataTruncation":  true,
+                                                                                                                       "treatBooleanAsNumber":  false
+                                                                                                                   }
+                                                                                    }
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+
+                                                            ],
+                                              "name":  "SET_BATCH_ID",
+                                              "policy":  {
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "type":  "SetVariable",
+                                              "typeProperties":  {
+                                                                     "value":  {
+                                                                                   "type":  "Expression",
+                                                                                   "value":  "@guid()"
+                                                                               },
+                                                                     "variableName":  "batch_id"
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "SET_BATCH_ID",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_STAFFING_REQUESTS_STARTED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\n  \u0027CALL AMN_DEV.CONTROL.START_HR_RUN(\u0027\u0027\u0027,\n  pipeline().RunId,\n  \u0027\u0027\u0027,\u0027\u0027\u0027,\n  variables(\u0027batch_id\u0027),\n  \u0027\u0027\u0027,\u0027\u0027STAFFING_REQUESTS\u0027\u0027);\u0027\n)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_STAFFING_REQUESTS_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "MERGE_STAFFING_REQUESTS_TO_CURATED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  "CALL AMN_DEV.CURATED.MERGE_STAFFING_REQUESTS();",
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_STAFFING_REQUESTS_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_STAFFING_REQUESTS_SUCCEEDED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\n  \u0027CALL AMN_DEV.CONTROL.SUCCEED_HR_RUN(\u0027\u0027\u0027,\n  pipeline().RunId,\n  \u0027\u0027\u0027,\u0027\u0027STAFFING_REQUESTS\u0027\u0027,\u0027,\n  string(activity(\u0027COPY_STAFFING_REQUESTS_TO_RAW\u0027).output.rowsRead),\n  \u0027,\u0027,\n  string(activity(\u0027COPY_STAFFING_REQUESTS_TO_RAW\u0027).output.rowsCopied),\n  \u0027);\u0027\n)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_STAFFING_REQUESTS_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_COPY_STAFFING_REQUESTS_FAILED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HR_RUN(\u0027\u0027\u0027,pipeline().RunId,\u0027\u0027\u0027,\u0027\u0027STAFFING_REQUESTS\u0027\u0027,\u0027\u0027COPY_FAILED\u0027\u0027,\u0027\u0027ADF Copy activity failed\u0027\u0027);\u0027)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          },
+                                          {
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_STAFFING_REQUESTS_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "name":  "AUDIT_MERGE_STAFFING_REQUESTS_FAILED",
+                                              "policy":  {
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false,
+                                                             "timeout":  "0.12:00:00"
+                                                         },
+                                              "type":  "Script",
+                                              "typeProperties":  {
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00",
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HR_RUN(\u0027\u0027\u0027,pipeline().RunId,\u0027\u0027\u0027,\u0027\u0027STAFFING_REQUESTS\u0027\u0027,\u0027\u0027MERGE_FAILED\u0027\u0027,\u0027\u0027Snowflake merge activity failed\u0027\u0027);\u0027)"
+                                                                                                  },
+                                                                                         "type":  "Query"
+                                                                                     }
+                                                                                 ]
+                                                                 },
+                                              "userProperties":  [
+
+                                                                 ]
+                                          }
+                                      ],
+                       "annotations":  [
+
+                                       ],
+                       "variables":  {
+                                         "batch_id":  {
+                                                          "type":  "String"
+                                                      }
+                                     }
+                   }
+}

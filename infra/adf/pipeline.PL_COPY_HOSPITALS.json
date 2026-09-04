@@ -1,0 +1,362 @@
+{
+    "properties":  {
+                       "annotations":  [
+
+                                       ],
+                       "variables":  {
+                                         "batch_id":  {
+                                                          "type":  "String"
+                                                      }
+                                     },
+                       "activities":  [
+                                          {
+                                              "name":  "SET_BATCH_ID",
+                                              "type":  "SetVariable",
+                                              "dependsOn":  [
+
+                                                            ],
+                                              "policy":  {
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "typeProperties":  {
+                                                                     "variableName":  "batch_id",
+                                                                     "value":  {
+                                                                                   "type":  "Expression",
+                                                                                   "value":  "@guid()"
+                                                                               }
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "AUDIT_HOSPITALS_STARTED",
+                                              "type":  "Script",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "SET_BATCH_ID",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "typeProperties":  {
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "type":  "Query",
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.START_HOSPITALS_RUN(\u0027\u0027\u0027, pipeline().RunId, \u0027\u0027\u0027,\u0027\u0027\u0027, variables(\u0027batch_id\u0027), \u0027\u0027\u0027);\u0027)"
+                                                                                                  }
+                                                                                     }
+                                                                                 ],
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00"
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "COPY_HOSPITALS_TO_RAW",
+                                              "type":  "Copy",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "AUDIT_HOSPITALS_STARTED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "typeProperties":  {
+                                                                     "source":  {
+                                                                                    "type":  "DelimitedTextSource",
+                                                                                    "storeSettings":  {
+                                                                                                          "type":  "AzureBlobFSReadSettings",
+                                                                                                          "recursive":  true,
+                                                                                                          "enablePartitionDiscovery":  false
+                                                                                                      },
+                                                                                    "formatSettings":  {
+                                                                                                           "type":  "DelimitedTextReadSettings"
+                                                                                                       }
+                                                                                },
+                                                                     "sink":  {
+                                                                                  "type":  "SnowflakeV2Sink",
+                                                                                  "importSettings":  {
+                                                                                                         "type":  "SnowflakeImportCopyCommand"
+                                                                                                     }
+                                                                              },
+                                                                     "enableStaging":  true,
+                                                                     "stagingSettings":  {
+                                                                                             "linkedServiceName":  {
+                                                                                                                       "referenceName":  "LS_BLOB_STAGE_SAS",
+                                                                                                                       "type":  "LinkedServiceReference"
+                                                                                                                   },
+                                                                                             "path":  "checkpoint/snowflake-stage/hospitals"
+                                                                                         },
+                                                                     "translator":  {
+                                                                                        "type":  "TabularTranslator",
+                                                                                        "mappings":  [
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_id",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_ID",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_name",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_NAME",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "city",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "CITY",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "state",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "STATE",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_type",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_TYPE",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "ownership",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "OWNERSHIP",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "emergency_services",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "EMERGENCY_SERVICES",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         },
+                                                                                                         {
+                                                                                                             "source":  {
+                                                                                                                            "name":  "hospital_rating",
+                                                                                                                            "type":  "String"
+                                                                                                                        },
+                                                                                                             "sink":  {
+                                                                                                                          "name":  "HOSPITAL_RATING",
+                                                                                                                          "type":  "String"
+                                                                                                                      }
+                                                                                                         }
+                                                                                                     ],
+                                                                                        "typeConversion":  true,
+                                                                                        "typeConversionSettings":  {
+                                                                                                                       "allowDataTruncation":  true,
+                                                                                                                       "treatBooleanAsNumber":  false
+                                                                                                                   }
+                                                                                    }
+                                                                 },
+                                              "inputs":  [
+                                                             {
+                                                                 "referenceName":  "DS_ADLS_CSV",
+                                                                 "type":  "DatasetReference",
+                                                                 "parameters":  {
+                                                                                    "container":  "landing",
+                                                                                    "directory":  "cms/hospitals",
+                                                                                    "file_name":  "hospitals_reference.csv"
+                                                                                }
+                                                             }
+                                                         ],
+                                              "outputs":  [
+                                                              {
+                                                                  "referenceName":  "DS_SNOWFLAKE_TABLE",
+                                                                  "type":  "DatasetReference",
+                                                                  "parameters":  {
+                                                                                     "schema_name":  "RAW",
+                                                                                     "table_name":  "HOSPITALS"
+                                                                                 }
+                                                              }
+                                                          ]
+                                          },
+                                          {
+                                              "name":  "MERGE_HOSPITALS_TO_CURATED",
+                                              "type":  "Script",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_HOSPITALS_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "typeProperties":  {
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "type":  "Query",
+                                                                                         "text":  "CALL AMN_DEV.CURATED.MERGE_HOSPITALS();"
+                                                                                     }
+                                                                                 ],
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00"
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "AUDIT_HOSPITALS_SUCCEEDED",
+                                              "type":  "Script",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_HOSPITALS_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Succeeded"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "typeProperties":  {
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "type":  "Query",
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.SUCCEED_HOSPITALS_RUN(\u0027\u0027\u0027, pipeline().RunId, \u0027\u0027\u0027,\u0027, string(activity(\u0027COPY_HOSPITALS_TO_RAW\u0027).output.rowsRead), \u0027,\u0027, string(activity(\u0027COPY_HOSPITALS_TO_RAW\u0027).output.rowsCopied), \u0027);\u0027)"
+                                                                                                  }
+                                                                                     }
+                                                                                 ],
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00"
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "AUDIT_COPY_HOSPITALS_FAILED",
+                                              "type":  "Script",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "COPY_HOSPITALS_TO_RAW",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "typeProperties":  {
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "type":  "Query",
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HOSPITALS_RUN(\u0027\u0027\u0027, pipeline().RunId, \u0027\u0027\u0027,\u0027\u0027COPY_FAILED\u0027\u0027,\u0027\u0027\u0027, replace(activity(\u0027COPY_HOSPITALS_TO_RAW\u0027).error.message,\u0027\u0027\u0027\u0027,\u0027\u0027\u0027\u0027\u0027\u0027), \u0027\u0027\u0027);\u0027)"
+                                                                                                  }
+                                                                                     }
+                                                                                 ],
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00"
+                                                                 }
+                                          },
+                                          {
+                                              "name":  "AUDIT_MERGE_HOSPITALS_FAILED",
+                                              "type":  "Script",
+                                              "dependsOn":  [
+                                                                {
+                                                                    "activity":  "MERGE_HOSPITALS_TO_CURATED",
+                                                                    "dependencyConditions":  [
+                                                                                                 "Failed"
+                                                                                             ]
+                                                                }
+                                                            ],
+                                              "policy":  {
+                                                             "timeout":  "0.12:00:00",
+                                                             "retry":  0,
+                                                             "retryIntervalInSeconds":  30,
+                                                             "secureInput":  false,
+                                                             "secureOutput":  false
+                                                         },
+                                              "linkedServiceName":  {
+                                                                        "referenceName":  "LS_SNOWFLAKE_V2",
+                                                                        "type":  "LinkedServiceReference"
+                                                                    },
+                                              "typeProperties":  {
+                                                                     "scripts":  [
+                                                                                     {
+                                                                                         "type":  "Query",
+                                                                                         "text":  {
+                                                                                                      "type":  "Expression",
+                                                                                                      "value":  "@concat(\u0027CALL AMN_DEV.CONTROL.FAIL_HOSPITALS_RUN(\u0027\u0027\u0027, pipeline().RunId, \u0027\u0027\u0027,\u0027\u0027MERGE_FAILED\u0027\u0027,\u0027\u0027\u0027, replace(activity(\u0027MERGE_HOSPITALS_TO_CURATED\u0027).error.message,\u0027\u0027\u0027\u0027,\u0027\u0027\u0027\u0027\u0027\u0027), \u0027\u0027\u0027);\u0027)"
+                                                                                                  }
+                                                                                     }
+                                                                                 ],
+                                                                     "scriptBlockExecutionTimeout":  "02:00:00"
+                                                                 }
+                                          }
+                                      ],
+                       "folder":  null
+                   }
+}

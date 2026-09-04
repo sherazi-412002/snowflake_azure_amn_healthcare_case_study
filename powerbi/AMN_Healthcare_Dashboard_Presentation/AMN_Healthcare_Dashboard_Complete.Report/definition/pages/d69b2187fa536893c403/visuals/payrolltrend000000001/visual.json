@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "payrolltrend000000001",
+  "position": {
+    "x": 24,
+    "y": 278,
+    "z": 14000,
+    "height": 410,
+    "width": 410,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_DATE"
+                    }
+                  },
+                  "Property": "FULL_DATE"
+                }
+              },
+              "queryRef": "DIM_DATE.FULL_DATE",
+              "nativeQueryRef": "FULL_DATE",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_PAYROLL"
+                    }
+                  },
+                  "Property": "Gross Payroll"
+                }
+              },
+              "queryRef": "FACT_PAYROLL.Gross Payroll",
+              "nativeQueryRef": "Gross Payroll"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_PAYROLL"
+                    }
+                  },
+                  "Property": "Net Payroll"
+                }
+              },
+              "queryRef": "FACT_PAYROLL.Net Payroll",
+              "nativeQueryRef": "Net Payroll"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Gross and Net Pay Over Time'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

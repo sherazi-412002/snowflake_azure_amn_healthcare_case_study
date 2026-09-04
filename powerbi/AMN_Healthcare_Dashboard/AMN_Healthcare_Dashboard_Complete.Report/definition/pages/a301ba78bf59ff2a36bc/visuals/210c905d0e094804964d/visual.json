@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "210c905d0e094804964d",
+  "position": {
+    "x": 610,
+    "y": 335,
+    "z": 7000,
+    "height": 350,
+    "width": 350,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "PRIORITY"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.PRIORITY",
+              "nativeQueryRef": "PRIORITY",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "Total Requests"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.Total Requests",
+              "nativeQueryRef": "Total Requests"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Requests by Priority'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
