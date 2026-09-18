@@ -234,11 +234,84 @@
                                                                                         }
                                                                                     ]
                                                                  }
-                                          }
-                                      ],
-                       "annotations":  [
-
+                                           },
+                                           {
+                                               "name": "WEB_NOTIFY_SUCCESS",
+                                               "type": "WebActivity",
+                                               "dependsOn": [
+                                                   {
+                                                       "activity": "FOR_EACH_ENABLED_CONFIG",
+                                                       "dependencyConditions": [
+                                                           "Succeeded"
+                                                       ]
+                                                   }
+                                               ],
+                                               "policy": {
+                                                   "timeout": "00:01:00",
+                                                   "retry": 1,
+                                                   "retryIntervalInSeconds": 30,
+                                                   "secureInput": false,
+                                                   "secureOutput": false
+                                               },
+                                               "userProperties": [],
+                                               "typeProperties": {
+                                                   "method": "POST",
+                                                   "url": {
+                                                       "value": "@pipeline().parameters.logicAppNotifyUrl",
+                                                       "type": "Expression"
+                                                   },
+                                                   "headers": {
+                                                       "Content-Type": "application/json"
+                                                   },
+                                                   "body": {
+                                                       "value": "@concat('{\"pipeline_name\":\"PL_METADATA_INGEST\",\"status\":\"Succeeded\",\"run_id\":\"', pipeline().RunId, '\",\"start_time\":\"', string(pipeline().TriggerTime), '\",\"error_message\":\"\"}')",
+                                                       "type": "Expression"
+                                                   }
+                                               }
+                                           },
+                                           {
+                                               "name": "WEB_NOTIFY_FAILURE",
+                                               "type": "WebActivity",
+                                               "dependsOn": [
+                                                   {
+                                                       "activity": "FOR_EACH_ENABLED_CONFIG",
+                                                       "dependencyConditions": [
+                                                           "Failed"
+                                                       ]
+                                                   }
+                                               ],
+                                               "policy": {
+                                                   "timeout": "00:01:00",
+                                                   "retry": 0,
+                                                   "secureInput": false,
+                                                   "secureOutput": false
+                                               },
+                                               "userProperties": [],
+                                               "typeProperties": {
+                                                   "method": "POST",
+                                                   "url": {
+                                                       "value": "@pipeline().parameters.logicAppNotifyUrl",
+                                                       "type": "Expression"
+                                                   },
+                                                   "headers": {
+                                                       "Content-Type": "application/json"
+                                                   },
+                                                   "body": {
+                                                       "value": "@concat('{\"pipeline_name\":\"PL_METADATA_INGEST\",\"status\":\"Failed\",\"run_id\":\"', pipeline().RunId, '\",\"start_time\":\"', string(pipeline().TriggerTime), '\",\"error_message\":\"Metadata ingest batch execution failed\"}')",
+                                                       "type": "Expression"
+                                                   }
+                                               }
+                                           }
                                        ],
-                       "folder":  null
-                   }
+                        "parameters": {
+                            "logicAppNotifyUrl": {
+                                "type": "string",
+                                "defaultValue": "https://prod-09.eastus2.logic.azure.com:443/workflows/17c31f869426413e8648c43cfcd0ea0c/triggers/When_ADF_Pipeline_Calls/paths/invoke?api-version=2019-05-01&sp=%2Ftriggers%2FWhen_ADF_Pipeline_Calls%2Frun&sv=1.0&sig=gzleHDskR1Oi5R9qL37q6PGEIu2anrC4z8eejxsEGcw"
+                            }
+                        },
+                        "annotations":  [
+
+                                        ],
+                        "folder":  null
+                    }
 }

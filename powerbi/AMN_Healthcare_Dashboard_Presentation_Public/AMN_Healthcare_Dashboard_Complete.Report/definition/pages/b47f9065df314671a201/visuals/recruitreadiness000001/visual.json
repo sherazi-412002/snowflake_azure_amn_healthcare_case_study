@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "recruitreadiness000001",
+  "position": {
+    "x": 428,
+    "y": 278,
+    "z": 15000,
+    "height": 410,
+    "width": 414,
+    "tabOrder": 15000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "DEPARTMENT"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.DEPARTMENT",
+              "nativeQueryRef": "DEPARTMENT",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "Credential-Ready Candidates"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.Credential-Ready Candidates",
+              "nativeQueryRef": "Credential-Ready Candidates"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_CANDIDATE"
+                    }
+                  },
+                  "Property": "Background-Cleared Candidates"
+                }
+              },
+              "queryRef": "DIM_CANDIDATE.Background-Cleared Candidates",
+              "nativeQueryRef": "Background-Cleared Candidates"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Candidates by Department and Readiness'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

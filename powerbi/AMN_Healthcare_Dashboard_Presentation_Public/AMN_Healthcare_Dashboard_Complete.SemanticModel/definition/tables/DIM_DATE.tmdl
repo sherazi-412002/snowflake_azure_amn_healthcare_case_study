@@ -1,0 +1,103 @@
+table DIM_DATE
+	lineageTag: 1d43c576-0d2c-4cd4-be29-712e8da304d8
+	dataCategory: Time
+
+	column FULL_DATE
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: f3abfea2-9426-4871-a582-0ebea66fb4d7
+		summarizeBy: none
+		sourceColumn: FULL_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YEAR_NUMBER
+		dataType: double
+		sourceProviderType: decimal(4, 0)
+		lineageTag: 49d58cd8-34dc-4452-979d-fa9e18743a8c
+		summarizeBy: sum
+		sourceColumn: YEAR_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column QUARTER_NUMBER
+		dataType: double
+		sourceProviderType: decimal(2, 0)
+		lineageTag: 2d16f2af-7003-4cf0-b3ae-1d42ce4dc1b2
+		summarizeBy: sum
+		sourceColumn: QUARTER_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MONTH_NUMBER
+		dataType: double
+		sourceProviderType: decimal(2, 0)
+		lineageTag: be154a3b-65d2-47cb-b7db-db16fe410374
+		summarizeBy: sum
+		sourceColumn: MONTH_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MONTH_NAME
+		dataType: string
+		sourceProviderType: nvarchar(3)
+		lineageTag: de3bab3e-5795-4d11-a269-deeb42601c89
+		summarizeBy: none
+		sourceColumn: MONTH_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column WEEK_NUMBER
+		dataType: double
+		sourceProviderType: decimal(2, 0)
+		lineageTag: 6b6ce423-8117-4619-8085-e803b8a7f593
+		summarizeBy: sum
+		sourceColumn: WEEK_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_OF_MONTH
+		dataType: double
+		sourceProviderType: decimal(2, 0)
+		lineageTag: 03050094-66c5-4c46-86ce-0488fbb07d09
+		summarizeBy: sum
+		sourceColumn: DAY_OF_MONTH
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DAY_NAME
+		dataType: string
+		sourceProviderType: nvarchar(3)
+		lineageTag: 395aabcf-b5b3-43cc-865a-c67c9f75c955
+		summarizeBy: none
+		sourceColumn: DAY_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_DATE = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    DIM_DATE_View = MARTS_Schema{[Name="DIM_DATE",Kind="View"]}[Data]
+				in
+				    DIM_DATE_View
+
+	annotation PBI_ResultType = Table
+

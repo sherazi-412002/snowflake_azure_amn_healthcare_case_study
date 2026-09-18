@@ -1,0 +1,94 @@
+table DIM_HOSPITAL
+	lineageTag: e45cdaad-ab78-45c3-8347-e8807af9f615
+
+	column HOSPITAL_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 2b3c4ee6-b0bd-4d0e-922b-dcb93e420351
+		summarizeBy: none
+		sourceColumn: HOSPITAL_ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_NAME
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 0a733a49-e454-4561-930a-70fa792725b5
+		summarizeBy: none
+		sourceColumn: HOSPITAL_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column CITY
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 7c222d92-c5ba-40bc-9d31-820ef3bc3a75
+		summarizeBy: none
+		sourceColumn: CITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 03e46127-2423-4d1e-9d30-0708cc3f01ce
+		summarizeBy: none
+		sourceColumn: STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_TYPE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 96acbb89-654f-4d06-9ef6-70ee0aca0d76
+		summarizeBy: none
+		sourceColumn: HOSPITAL_TYPE
+
+		annotation SummarizationSetBy = Automatic
+
+	column OWNERSHIP
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 9f2eff2d-2b14-4724-b557-1947ac58f32d
+		summarizeBy: none
+		sourceColumn: OWNERSHIP
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMERGENCY_SERVICES
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 253dd001-cc2c-4bed-8571-9fb0d446a831
+		summarizeBy: none
+		sourceColumn: EMERGENCY_SERVICES
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_RATING
+		dataType: double
+		sourceProviderType: decimal(2, 0)
+		lineageTag: 529dbcf6-635a-4b13-acd3-c62a78427493
+		summarizeBy: sum
+		sourceColumn: HOSPITAL_RATING
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition DIM_HOSPITAL = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    DIM_HOSPITAL_View = MARTS_Schema{[Name="DIM_HOSPITAL",Kind="View"]}[Data]
+				in
+				    DIM_HOSPITAL_View
+
+	annotation PBI_ResultType = Table
+

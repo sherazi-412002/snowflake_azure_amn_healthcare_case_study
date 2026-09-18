@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "payrolltrend000000001",
   "position": {
-    "x": 24,
-    "y": 278,
+    "x": 20.318838613391222,
+    "y": 278.21179024489521,
     "z": 14000,
-    "height": 410,
-    "width": 410,
+    "height": 409.50274743911541,
+    "width": 411.06573502476084,
     "tabOrder": 14000
   },
   "visual": {

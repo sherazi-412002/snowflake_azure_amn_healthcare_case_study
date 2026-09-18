@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
-  "name": "b47f9065df314671a201",
-  "displayName": "Recruiting & Candidates",
-  "displayOption": "FitToPage",
-  "height": 720,
-  "width": 1280
-}

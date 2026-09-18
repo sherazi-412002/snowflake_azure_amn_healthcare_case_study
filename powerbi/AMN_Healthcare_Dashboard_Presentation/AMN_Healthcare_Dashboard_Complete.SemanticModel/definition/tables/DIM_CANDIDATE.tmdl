@@ -41,10 +41,12 @@ table DIM_CANDIDATE
 	measure 'Active Candidates' =
 			CALCULATE(
 			    DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]),
-			    'DIM_CANDIDATE'[CANDIDATE_STATUS] IN {"AVAILABLE", "ACTIVE", "QUALIFIED"}
+			    'DIM_CANDIDATE'[CANDIDATE_STATUS] IN {"Hired"}
 			)
 		formatString: 0
 		lineageTag: 6eb127ce-f105-4db0-bbac-e68c789d5801
+
+		changedProperty = IsHidden
 
 	measure Applications = DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID])
 		formatString: 0

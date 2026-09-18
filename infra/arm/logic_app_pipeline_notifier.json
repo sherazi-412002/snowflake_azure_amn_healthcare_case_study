@@ -1,8 +1,8 @@
-﻿{
+{
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "logicAppName":       { "type": "string", "defaultValue": "logic-amn-dev-ionqqq" },
+    "logicAppName":       { "type": "string", "defaultValue": "logic-amn-dev" },
     "location":           { "type": "string", "defaultValue": "eastus2" },
     "gmailConnectionName":{ "type": "string", "defaultValue": "gmail-amn-notifier" }
   },

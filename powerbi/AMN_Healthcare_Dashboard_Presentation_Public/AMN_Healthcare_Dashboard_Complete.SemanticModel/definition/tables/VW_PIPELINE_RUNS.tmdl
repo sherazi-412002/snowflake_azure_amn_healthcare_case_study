@@ -1,0 +1,318 @@
+table VW_PIPELINE_RUNS
+	lineageTag: 746d5df8-58ae-43b5-a58d-8abab7cc9844
+
+	measure 'Pipeline Runs' = ```
+			
+			        COUNTROWS('VW_PIPELINE_RUNS')
+			```
+		formatString: 0
+		lineageTag: 59dec5f0-ec94-434f-b499-f42f7a25b076
+
+	measure 'Successful Runs' = ```
+			
+			        CALCULATE(COUNTROWS('VW_PIPELINE_RUNS'), 'VW_PIPELINE_RUNS'[STATUS] = "SUCCEEDED")
+			```
+		formatString: 0
+		lineageTag: 9bafc632-7009-4800-9c4d-bcde4847c405
+
+	measure 'Failed Runs' = CALCULATE(COUNTROWS('VW_PIPELINE_RUNS'), 'VW_PIPELINE_RUNS'[STATUS] = "FAILED")
+		formatString: 0
+		lineageTag: 3ca3eeeb-5066-49d4-8670-89d63f528e4f
+
+	measure 'Total Retry Count' = SUM('VW_PIPELINE_RUNS'[RETRY_COUNT])
+		formatString: 0
+		lineageTag: 7ae4aaf2-37ee-4865-b17c-ea53272e7dda
+
+	measure 'Rows Processed' = SUM('VW_PIPELINE_RUNS'[ROWS_INSERTED]) + SUM('VW_PIPELINE_RUNS'[ROWS_UPDATED]) + SUM('VW_PIPELINE_RUNS'[ROWS_DELETED])
+		formatString: #,0
+		lineageTag: 51ca4b3a-2f57-487a-8423-e4645bd4c4c4
+
+	measure 'Pipeline Success Rate' = ```
+				
+			        DIVIDE([Successful Runs], [Pipeline Runs])
+			```
+		formatString: 0.0%
+		lineageTag: f7e60c25-8a50-409e-9360-86a4a4ac1296
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Runs Within SLA' = ```
+			
+			        CALCULATE(COUNTROWS('VW_PIPELINE_RUNS'), 'VW_PIPELINE_RUNS'[WITHIN_RUN_SLA] = TRUE())
+			```
+		formatString: 0
+		lineageTag: f3dfb255-c2b3-4e1e-8459-e62aed65888c
+
+	measure 'SLA Compliance' = ```
+				
+			        DIVIDE([Runs Within SLA], [Pipeline Runs])
+			```
+		formatString: 0.0%
+		lineageTag: 6c656ed0-8573-4d22-ba2f-af70e1028eaa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Runtime Seconds' = ```
+			
+			        AVERAGE('VW_PIPELINE_RUNS'[RUN_DURATION_SECONDS])
+			```
+		lineageTag: 185bbbca-864b-4fae-a32d-e2f7e1a227a8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Last Successful Load' = ```
+			
+			        CALCULATE(MAX('VW_PIPELINE_RUNS'[CURATED_AT]), 'VW_PIPELINE_RUNS'[STATUS] = "SUCCEEDED")
+			```
+		formatString: General Date
+		lineageTag: 4d946b80-629b-4833-aeee-925a5911206a
+
+	column RUN_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 68cbeeec-cea7-4980-a2f3-d68a8d63c571
+		summarizeBy: none
+		sourceColumn: RUN_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BATCH_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 95646609-9356-441f-b489-7d91000b0fbc
+		summarizeBy: none
+		sourceColumn: BATCH_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_SYSTEM
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 8eea88d9-c5bc-4018-9a25-a1cb85739967
+		summarizeBy: none
+		sourceColumn: SOURCE_SYSTEM
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_OBJECT
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 1cc2db46-c950-493a-a0dc-f77a436b7358
+		summarizeBy: none
+		sourceColumn: SOURCE_OBJECT
+
+		annotation SummarizationSetBy = Automatic
+
+	column TARGET_TABLE
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: df8c9cbb-3835-4600-a0b5-d7da05119d30
+		summarizeBy: none
+		sourceColumn: TARGET_TABLE
+
+		annotation SummarizationSetBy = Automatic
+
+	column STATUS
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 0840acfa-9058-4a24-907e-7d0aa6863f6b
+		summarizeBy: none
+		sourceColumn: STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXTRACT_STARTED_AT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 56a515ea-eb52-408c-8988-efe8719e2877
+		summarizeBy: none
+		sourceColumn: EXTRACT_STARTED_AT
+
+		variation Variation
+			isDefault
+			relationship: f181f3ed-de37-4271-8e56-40cf26e1c3fd
+			defaultHierarchy: LocalDateTable_81aed280-6c1f-403e-8553-b573f230f46e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXTRACT_FINISHED_AT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a49b18c2-203d-4f27-8ce7-4babbe5a96f4
+		summarizeBy: none
+		sourceColumn: EXTRACT_FINISHED_AT
+
+		variation Variation
+			isDefault
+			relationship: 7b5f8540-de01-421b-b11a-3e75b8a2eeaa
+			defaultHierarchy: LocalDateTable_26ecb822-651a-4a6f-83cc-bb501bd1d06e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAW_LOADED_AT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: edf08952-cbe2-4b29-8994-db97ef6b20a8
+		summarizeBy: none
+		sourceColumn: RAW_LOADED_AT
+
+		variation Variation
+			isDefault
+			relationship: 268361d7-b5c6-4fa0-8ea2-dba7e9cfd027
+			defaultHierarchy: LocalDateTable_b8bfa603-07cf-4cb3-9286-094fc3007611.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CURATED_AT
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 660a3c48-d8f3-4559-b048-b15072beb195
+		summarizeBy: none
+		sourceColumn: CURATED_AT
+
+		variation Variation
+			isDefault
+			relationship: 609a34d1-c6c1-4c25-92d3-c8318cd52d8c
+			defaultHierarchy: LocalDateTable_f48ae82d-d250-4261-b18c-45ec6d098487.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column RUN_DURATION_SECONDS
+		dataType: double
+		sourceProviderType: decimal(18, 0)
+		lineageTag: 30332075-7319-49f9-9ef0-a1e405754fc0
+		summarizeBy: sum
+		sourceColumn: RUN_DURATION_SECONDS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SLA_SECONDS
+		dataType: double
+		sourceProviderType: decimal(10, 0)
+		lineageTag: 2c55fe72-65a3-497d-ad91-d23cbe5dd741
+		summarizeBy: sum
+		sourceColumn: SLA_SECONDS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WITHIN_RUN_SLA
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 463f503a-c364-48aa-86e6-c2e0a14636cf
+		summarizeBy: none
+		sourceColumn: WITHIN_RUN_SLA
+
+		annotation SummarizationSetBy = Automatic
+
+	column ROWS_READ
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 37e248b9-e091-4090-9b31-1a5420b89f37
+		summarizeBy: sum
+		sourceColumn: ROWS_READ
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROWS_INSERTED
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: b65d0dba-4936-49d5-acb3-f2788db5af33
+		summarizeBy: sum
+		sourceColumn: ROWS_INSERTED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROWS_UPDATED
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 583a9def-4242-43ba-a9fe-b21bd11e6c25
+		summarizeBy: sum
+		sourceColumn: ROWS_UPDATED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROWS_DELETED
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 3ca61bee-c46d-45e2-8a70-ee6498ce282f
+		summarizeBy: sum
+		sourceColumn: ROWS_DELETED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROWS_REJECTED
+		dataType: double
+		sourceProviderType: decimal(38, 0)
+		lineageTag: 2557ea69-c583-4cd0-a922-dc1601904365
+		summarizeBy: sum
+		sourceColumn: ROWS_REJECTED
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RETRY_COUNT
+		dataType: double
+		sourceProviderType: decimal(10, 0)
+		lineageTag: 361071ab-7f74-4bcd-b3fa-579e315bfd17
+		summarizeBy: sum
+		sourceColumn: RETRY_COUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ERROR_CATEGORY
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 340cfa18-d3d8-4cef-b536-326cf92de708
+		summarizeBy: none
+		sourceColumn: ERROR_CATEGORY
+
+		annotation SummarizationSetBy = Automatic
+
+	column ERROR_MESSAGE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: e54c859f-3b63-4f69-98e1-89adaa43eeaf
+		summarizeBy: none
+		sourceColumn: ERROR_MESSAGE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition VW_PIPELINE_RUNS = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    VW_PIPELINE_RUNS_View = MARTS_Schema{[Name="VW_PIPELINE_RUNS",Kind="View"]}[Data]
+				in
+				    VW_PIPELINE_RUNS_View
+
+	annotation PBI_ResultType = Table
+

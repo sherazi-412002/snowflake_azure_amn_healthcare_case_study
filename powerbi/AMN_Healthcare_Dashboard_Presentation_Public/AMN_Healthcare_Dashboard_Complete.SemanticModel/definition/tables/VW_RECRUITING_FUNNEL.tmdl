@@ -1,0 +1,136 @@
+table VW_RECRUITING_FUNNEL
+	lineageTag: 51929abc-9f56-430a-9e0e-7936b8d3f31c
+
+	column APPLICATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 02b68ec8-6968-4218-a433-93430caeadcd
+		summarizeBy: none
+		sourceColumn: APPLICATION_DATE
+
+		variation Variation
+			isDefault
+			relationship: 46ecc4c8-eba2-4ff0-afc0-54a92eddc953
+			defaultHierarchy: LocalDateTable_a6bbc565-c202-4429-878d-6b084de21f15.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HOSPITAL_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 937f4310-41cd-4224-999a-c7b97b2ab419
+		summarizeBy: none
+		sourceColumn: HOSPITAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECRUITER_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 286e66fa-73e4-49f7-bc9b-6ab2a7f1bfc8
+		summarizeBy: none
+		sourceColumn: RECRUITER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROFESSION
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 0d179f7f-4ea8-4158-b010-1310e10794d9
+		summarizeBy: none
+		sourceColumn: PROFESSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 99e3e80b-7707-4230-bf77-55abcc921e35
+		summarizeBy: none
+		sourceColumn: DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column LICENSE_STATE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: a196410a-5de4-4b31-a62a-b0f79bc0bcae
+		summarizeBy: none
+		sourceColumn: LICENSE_STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_CHANNEL
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: a7d673fc-4955-4512-baa2-a21607fc78c5
+		summarizeBy: none
+		sourceColumn: SOURCE_CHANNEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANDIDATE_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 6c70b319-847d-4871-ac53-e80a8e7b653f
+		summarizeBy: none
+		sourceColumn: CANDIDATE_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column BACKGROUND_CHECK_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 1c5c7e69-3d6e-4713-bef9-c1b18c01fb4c
+		summarizeBy: none
+		sourceColumn: BACKGROUND_CHECK_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREDENTIAL_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 8bc8c6c5-56bb-49be-beae-f56fc1f32d37
+		summarizeBy: none
+		sourceColumn: CREDENTIAL_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CANDIDATE_COUNT
+		dataType: double
+		sourceProviderType: decimal(18, 0)
+		lineageTag: bfab8fa7-b929-4c83-abd4-443be32043a8
+		summarizeBy: sum
+		sourceColumn: CANDIDATE_COUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PLACEMENT_COUNT
+		dataType: double
+		sourceProviderType: decimal(13, 0)
+		lineageTag: 89fa4ffa-392e-4d9b-b2fb-de3399da73cc
+		summarizeBy: sum
+		sourceColumn: PLACEMENT_COUNT
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition VW_RECRUITING_FUNNEL = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    VW_RECRUITING_FUNNEL_View = MARTS_Schema{[Name="VW_RECRUITING_FUNNEL",Kind="View"]}[Data]
+				in
+				    VW_RECRUITING_FUNNEL_View
+
+	annotation PBI_ResultType = Table
+

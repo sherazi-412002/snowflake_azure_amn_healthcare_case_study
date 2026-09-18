@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "staffgap000000000001",
+  "position": {
+    "x": 892,
+    "y": 278,
+    "z": 16000,
+    "height": 410,
+    "width": 364,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_HOSPITAL"
+                    }
+                  },
+                  "Property": "HOSPITAL_NAME"
+                }
+              },
+              "queryRef": "DIM_HOSPITAL.HOSPITAL_NAME",
+              "nativeQueryRef": "HOSPITAL_NAME",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "FACT_STAFFING_REQUEST"
+                    }
+                  },
+                  "Property": "Staffing Gap"
+                }
+              },
+              "queryRef": "FACT_STAFFING_REQUEST.Staffing Gap",
+              "nativeQueryRef": "Staffing Gap"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Staffing Gap by Hospital'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,231 @@
+table DIM_CANDIDATE
+	lineageTag: d4ee1c4b-5979-4454-b300-7ed85562b87e
+
+	measure 'Total Candidates' = ```
+			
+			        DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID])
+			```
+		formatString: 0
+		lineageTag: b560d6c4-7431-4f96-8b69-60ca13bc676b
+
+	measure 'Available Candidates' = ```
+			
+			        CALCULATE(DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]), 'DIM_CANDIDATE'[CANDIDATE_STATUS] IN {"AVAILABLE", "ACTIVE", "QUALIFIED"})
+			```
+		formatString: 0
+		lineageTag: e9db01b0-b7f7-4788-ac72-c31d8cc81ced
+
+	measure 'Placed Candidates' = ```
+			
+			        CALCULATE(DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]), NOT ISBLANK('DIM_CANDIDATE'[EMPLOYEE_ID]))
+			```
+		formatString: 0
+		lineageTag: e1c4a898-4318-4887-bea8-9d7cc663462c
+
+	measure 'Active Placements' = ```
+			
+			        CALCULATE(DISTINCTCOUNT('DIM_CANDIDATE'[EMPLOYEE_ID]), NOT ISBLANK('DIM_CANDIDATE'[EMPLOYEE_ID]))
+			```
+		formatString: 0
+		lineageTag: 0000a221-ff83-4018-afbc-6c5cc8c5cc90
+
+	measure 'Placement Rate' = ```
+				
+			        DIVIDE([Placed Candidates], [Total Candidates])
+			```
+		formatString: 0.0%
+		lineageTag: 7d041b01-5da5-4897-b5f1-3848e34a7f02
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Active Candidates' =
+			CALCULATE(
+			    DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]),
+			    'DIM_CANDIDATE'[CANDIDATE_STATUS] IN {"AVAILABLE", "ACTIVE", "QUALIFIED"}
+			)
+		formatString: 0
+		lineageTag: 6eb127ce-f105-4db0-bbac-e68c789d5801
+
+	measure Applications = DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID])
+		formatString: 0
+		lineageTag: 10434185-c6d5-460f-8965-a71056944684
+
+	measure 'Credential-Ready Candidates' =
+			CALCULATE(
+			    DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]),
+			    'DIM_CANDIDATE'[CREDENTIAL_STATUS] IN {"VERIFIED", "CURRENT", "COMPLETE", "APPROVED"}
+			)
+		formatString: 0
+		lineageTag: d882c35a-083d-421f-8a13-eea269f014bb
+
+	measure 'Background-Cleared Candidates' =
+			CALCULATE(
+			    DISTINCTCOUNT('DIM_CANDIDATE'[CANDIDATE_ID]),
+			    'DIM_CANDIDATE'[BACKGROUND_CHECK_STATUS] IN {"CLEARED", "PASSED", "COMPLETE", "APPROVED"}
+			)
+		formatString: 0
+		lineageTag: 592d11cb-0e0b-419b-bba1-81c468a44541
+
+	column CANDIDATE_ID
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: a497215f-ff5f-42a2-b9dd-e2ebe03517cb
+		summarizeBy: none
+		sourceColumn: CANDIDATE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column REQUEST_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 538e9280-c03a-4205-81ca-76ebb31f7b03
+		summarizeBy: none
+		sourceColumn: REQUEST_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HOSPITAL_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: f6da50ed-c44e-44ae-9ab4-5b915192fab1
+		summarizeBy: none
+		sourceColumn: HOSPITAL_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column RECRUITER_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 2014d9d4-3594-4f66-8175-7f1452ea0d33
+		summarizeBy: none
+		sourceColumn: RECRUITER_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROFESSION
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 36255de1-c8a5-48cf-8bb2-63615d181233
+		summarizeBy: none
+		sourceColumn: PROFESSION
+
+		annotation SummarizationSetBy = Automatic
+
+	column DEPARTMENT
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 62a946b3-d02e-4dfd-9130-e998f85baca3
+		summarizeBy: none
+		sourceColumn: DEPARTMENT
+
+		annotation SummarizationSetBy = Automatic
+
+	column EXPERIENCE_YEARS
+		dataType: double
+		sourceProviderType: decimal(10, 0)
+		lineageTag: 933c65cc-b35b-4fe0-a304-1bba434417a9
+		summarizeBy: sum
+		sourceColumn: EXPERIENCE_YEARS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LICENSE_STATE
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 1249ee54-d6c0-497b-b25f-bf370958b691
+		summarizeBy: none
+		sourceColumn: LICENSE_STATE
+
+		annotation SummarizationSetBy = Automatic
+
+	column LICENSE_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 80de196a-3162-475e-ad2a-08457f11bb0b
+		summarizeBy: none
+		sourceColumn: LICENSE_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CERTIFICATIONS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 6b4f6044-1abc-474f-ade2-5c1719766e96
+		summarizeBy: none
+		sourceColumn: CERTIFICATIONS
+
+		annotation SummarizationSetBy = Automatic
+
+	column SOURCE_CHANNEL
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 01ddceaa-991c-4e4e-b0a8-f254d633d014
+		summarizeBy: none
+		sourceColumn: SOURCE_CHANNEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column APPLICATION_DATE
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: b60cf595-6ced-4985-8133-6c741f4420c3
+		summarizeBy: none
+		sourceColumn: APPLICATION_DATE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CANDIDATE_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: dfcf50b8-2c5a-4866-befb-f4c176d08bc4
+		summarizeBy: none
+		sourceColumn: CANDIDATE_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column BACKGROUND_CHECK_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 85a98b4f-fe8e-4930-bb1c-26617a7f4167
+		summarizeBy: none
+		sourceColumn: BACKGROUND_CHECK_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column CREDENTIAL_STATUS
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 5f250803-753e-4313-aa23-25b3531db90f
+		summarizeBy: none
+		sourceColumn: CREDENTIAL_STATUS
+
+		annotation SummarizationSetBy = Automatic
+
+	column EMPLOYEE_ID
+		dataType: string
+		sourceProviderType: nvarchar(16777216)
+		lineageTag: 4ca5de47-79eb-4427-adf4-bfd3fa4d29a7
+		summarizeBy: none
+		sourceColumn: EMPLOYEE_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DIM_CANDIDATE = m
+		mode: import
+		source =
+				let
+				    Source = Snowflake.Databases("PMNFHRD-OP32945.snowflakecomputing.com","AMN_BI_WH",[Implementation="2.0", Role="AMN_BI_ROLE"]),
+				    AMN_DEV_Database = Source{[Name="AMN_DEV",Kind="Database"]}[Data],
+				    MARTS_Schema = AMN_DEV_Database{[Name="MARTS",Kind="Schema"]}[Data],
+				    DIM_CANDIDATE_View = MARTS_Schema{[Name="DIM_CANDIDATE",Kind="View"]}[Data]
+				in
+				    DIM_CANDIDATE_View
+
+	annotation PBI_ResultType = Table
+

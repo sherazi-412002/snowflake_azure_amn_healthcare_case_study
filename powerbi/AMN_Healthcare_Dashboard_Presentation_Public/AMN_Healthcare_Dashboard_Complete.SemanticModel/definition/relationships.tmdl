@@ -1,0 +1,87 @@
+relationship 468dc8d1-7ab8-c426-6b84-a8fcbfa9a3bc
+	fromColumn: FACT_STAFFING_REQUEST.HOSPITAL_ID
+	toColumn: DIM_HOSPITAL.HOSPITAL_ID
+
+relationship 2df7c8d2-3e33-5ad4-1110-2738c45b5a02
+	fromColumn: FACT_PLACEMENT_SCHEDULE.HOSPITAL_ID
+	toColumn: DIM_HOSPITAL.HOSPITAL_ID
+
+relationship 3269e099-6af9-6f15-fbf2-b113ccff37ef
+	fromColumn: FACT_PAYROLL.HOSPITAL_ID
+	toColumn: DIM_HOSPITAL.HOSPITAL_ID
+
+relationship e76242f3-6d75-0960-32c7-2d4299464781
+	fromColumn: FACT_STAFFING_REQUEST.REQUEST_DATE
+	toColumn: DIM_DATE.FULL_DATE
+
+relationship 734ea4f7-ce66-8644-a70a-b48a030fabba
+	fromColumn: FACT_PLACEMENT_SCHEDULE.WORK_DATE
+	toColumn: DIM_DATE.FULL_DATE
+
+relationship 266b1027-b343-f819-f376-814d58454e5a
+	fromColumn: DIM_CANDIDATE.APPLICATION_DATE
+	toColumn: DIM_DATE.FULL_DATE
+
+relationship 9e897966-73dc-c323-9e3d-cfbc10b4e87b
+	fromColumn: FACT_PAYROLL.PAYROLL_MONTH_DATE
+	toColumn: DIM_DATE.FULL_DATE
+
+relationship 7fcfb088-1162-ce22-17c1-40df85d700e3
+	fromColumn: DIM_CANDIDATE.HOSPITAL_ID
+	toColumn: DIM_HOSPITAL.HOSPITAL_ID
+
+relationship f8449d58-def2-42ae-ac2a-f8d47053335f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FACT_STAFFING_REQUEST.ASSIGNMENT_START_DATE
+	toColumn: LocalDateTable_9ee73734-7e46-4ce9-9161-93e88233f1ed.Date
+
+relationship 05f8bafe-b91d-48f9-a069-67c998c404a3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: FACT_STAFFING_REQUEST.ASSIGNMENT_END_DATE
+	toColumn: LocalDateTable_405021c1-0fdf-4421-8a6f-0ff8475bc124.Date
+
+relationship fab41a0a-228f-48c6-aeca-d96193cdf60a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_LATEST_STATUS.EXTRACT_STARTED_AT
+	toColumn: LocalDateTable_fad353ec-89c3-492f-b03d-38e0cd3e4a2f.Date
+
+relationship 2963c677-a8c5-4682-b93f-38a32e485ca2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_LATEST_STATUS.EXTRACT_FINISHED_AT
+	toColumn: LocalDateTable_d9922404-e1f4-4234-a3b7-ea75f5d83ce5.Date
+
+relationship f4564709-e6d1-40b0-8225-3ed4d557badc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_LATEST_STATUS.RAW_LOADED_AT
+	toColumn: LocalDateTable_fabb7d6f-e8de-401c-877f-ca2012ea7951.Date
+
+relationship 94ca672d-8564-46e3-a26a-e3c6a55b473b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_LATEST_STATUS.CURATED_AT
+	toColumn: LocalDateTable_02de0d4e-91dc-49e0-9320-9bb6023942ed.Date
+
+relationship f181f3ed-de37-4271-8e56-40cf26e1c3fd
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_RUNS.EXTRACT_STARTED_AT
+	toColumn: LocalDateTable_81aed280-6c1f-403e-8553-b573f230f46e.Date
+
+relationship 7b5f8540-de01-421b-b11a-3e75b8a2eeaa
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_RUNS.EXTRACT_FINISHED_AT
+	toColumn: LocalDateTable_26ecb822-651a-4a6f-83cc-bb501bd1d06e.Date
+
+relationship 268361d7-b5c6-4fa0-8ea2-dba7e9cfd027
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_RUNS.RAW_LOADED_AT
+	toColumn: LocalDateTable_b8bfa603-07cf-4cb3-9286-094fc3007611.Date
+
+relationship 609a34d1-c6c1-4c25-92d3-c8318cd52d8c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_PIPELINE_RUNS.CURATED_AT
+	toColumn: LocalDateTable_f48ae82d-d250-4261-b18c-45ec6d098487.Date
+
+relationship 46ecc4c8-eba2-4ff0-afc0-54a92eddc953
+	joinOnDateBehavior: datePartOnly
+	fromColumn: VW_RECRUITING_FUNNEL.APPLICATION_DATE
+	toColumn: LocalDateTable_a6bbc565-c202-4429-878d-6b084de21f15.Date
+

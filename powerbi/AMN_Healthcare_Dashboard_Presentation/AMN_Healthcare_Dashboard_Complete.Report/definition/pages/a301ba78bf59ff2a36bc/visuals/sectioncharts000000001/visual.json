@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "sectioncharts000000001",
   "position": {
-    "x": 24,
-    "y": 254,
+    "x": 23.444813784682179,
+    "y": 254.76697646021302,
     "z": 13000,
-    "height": 24,
-    "width": 500,
+    "height": 29.696764127264093,
+    "width": 500.15602740655316,
     "tabOrder": 13000
   },
   "visual": {
@@ -23,11 +23,10 @@
                     "textStyle": {
                       "fontFamily": "Segoe UI Semibold",
                       "fontSize": "13px",
-                      "color": "#173B57"
+                      "color": "#173b57"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "left"
+                ]
               }
             ]
           }

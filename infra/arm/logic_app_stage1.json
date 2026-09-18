@@ -1,0 +1,63 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "logicAppName": { "type": "string", "defaultValue": "logic-amn-dev" },
+    "location": { "type": "string", "defaultValue": "eastus2" }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Logic/workflows",
+      "apiVersion": "2019-05-01",
+      "name": "[parameters('logicAppName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "state": "Enabled",
+        "definition": {
+          "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+          "contentVersion": "1.0.0.0",
+          "parameters": {},
+          "triggers": {
+            "When_ADF_Pipeline_Calls": {
+              "type": "Request",
+              "kind": "Http",
+              "inputs": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "pipeline_name": { "type": "string" },
+                    "status": { "type": "string" },
+                    "run_id": { "type": "string" },
+                    "start_time": { "type": "string" },
+                    "error_message": { "type": "string" }
+                  }
+                }
+              }
+            }
+          },
+          "actions": {
+            "Respond_200": {
+              "type": "Response",
+              "runAfter": {},
+              "inputs": {
+                "statusCode": 200,
+                "body": {
+                  "message": "Notification received",
+                  "pipeline": "@triggerBody()?['pipeline_name']",
+                  "status": "@triggerBody()?['status']",
+                  "runId": "@triggerBody()?['run_id']"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "outputs": {
+    "logicAppTriggerUrl": {
+      "type": "string",
+      "value": "[listCallbackURL(concat(resourceId('Microsoft.Logic/workflows', parameters('logicAppName')), '/triggers/When_ADF_Pipeline_Calls'), '2019-05-01').value]"
+    }
+  }
+}

@@ -5,27 +5,42 @@ backend.hcl
 terraform.tfvars
 *.tfstate
 *.tfstate.*
+*.tfplan
 .terraform/
 .terraform.lock.hcl
 
 # Sensitive config
 .agents/mcp_config.json
 
+# MS Office temporary and lock files
+~$*
+*.tmp
+
 # Temp & system files
-.codex-write-test.tmp
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
 .DS_Store
 Thumbs.db
+ehthumbs.db
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # Python virtual envs
 .venv/
 venv/
 env/
+ENV/
 
-# Logs
+# Logs & test artifacts
 *.log
+docs/test_*.docx
 
 # Node
 node_modules/
+

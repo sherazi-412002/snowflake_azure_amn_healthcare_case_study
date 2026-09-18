@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "sectioncharts000000001",
   "position": {
-    "x": 24,
-    "y": 248,
+    "x": 23.444813784682179,
+    "y": 248.51502611763109,
     "z": 13000,
-    "height": 24,
-    "width": 600,
+    "height": 29.696764127264093,
+    "width": 600.18723288786373,
     "tabOrder": 13000
   },
   "visual": {
@@ -26,8 +26,7 @@
                       "color": "#263238"
                     }
                   }
-                ],
-                "horizontalTextAlignment": "left"
+                ]
               }
             ]
           }
