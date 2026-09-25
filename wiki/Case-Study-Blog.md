@@ -103,29 +103,12 @@ Let's break down each core technology used, how it works in this architecture, t
 
 The semantic model in `AMN_DEV.MARTS` powers a 4-page executive reporting suite:
 
-```
-+-----------------------------------------------------------------------------------------+
-|                                POWER BI 4-PAGE DASHBOARD SUITE                          |
-+-----------------------------------------------------------------------------------------+
-|                                                                                         |
-|  Page 1: Executive Overview                                                             |
-|  * KPIs: Total Requisitions, Open Positions, Placements, Fill Rate %, Invoiced Revenue  |
-|  * Visuals: Monthly Placement Trends, State Demand Heatmap, Urgent Requisition Ratios   |
-|                                                                                         |
-|  Page 2: Recruiting & Candidate Supply Funnel                                           |
-|  * KPIs: Total Candidates, Active Recruiter Count, Average Time to Fill (Days)          |
-|  * Visuals: Funnel Stage Conversion (Applied -> Placed), Specialty Distribution         |
-|                                                                                         |
-|  Page 3: Clinical Staffing Operations & Demand                                          |
-|  * KPIs: Department Demand Breakdown (Critical Care, ER, OR), Shift Coverage %          |
-|  * Visuals: Open Shifts by Facility, Day vs. Night Shift Coverage                      |
-|                                                                                         |
-|  Page 4: Healthcare Payroll & Pipeline SLA Observability                                |
-|  * KPIs: Regular vs. Overtime Hours, Gross vs. Net Pay, Pipeline Success Rate (99.9%)   |
-|  * Visuals: Overtime Cost Variance, Real-time Ingestion Latency vs. SLA Thresholds     |
-|                                                                                         |
-+-----------------------------------------------------------------------------------------+
-```
+![Power BI Executive Workforce & Analytics Dashboard Suite](powerbi.png)
+
+* **Page 1: Executive Overview:** Requisition volumes, placement metrics, fill rates, invoiced revenue, monthly trends, and state demand distribution.
+* **Page 2: Recruiting & Candidate Supply Funnel:** Candidate stage transitions (Applied $\rightarrow$ Screened $\rightarrow$ Placed), recruiter activity, and average time-to-fill (days).
+* **Page 3: Clinical Staffing Operations & Demand:** Specialty and department breakdowns (Critical Care, ER, OR), shift coverage, and day vs. night placement allocation.
+* **Page 4: Healthcare Payroll & Pipeline SLA Observability:** Regular vs. overtime hours, gross vs. net pay variances, real-time ingestion latency, and 99.9% pipeline SLA tracking.
 
 ---
 
