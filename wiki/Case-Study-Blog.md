@@ -127,4 +127,4 @@ This case study highlights five vital lessons for building modern multi-cloud pl
 > This project is a comprehensive, hands-on **learning and educational data engineering case study** inspired by Snowflake's published customer modernization stories (specifically the public AMN Healthcare case study). All datasets used in this implementation are **synthetic, simulated, or public healthcare reference datasets** (CMS Hospital Quality Data and generated HR staffing records). The published outcomes (>100 GB/day, 99.9% SLA, 93% cost reduction) are industry-verified reference benchmarks and architectural design goals, not claims of AMN Healthcare's proprietary production systems.
 
 ---
-*Published by the Data Engineering Team — AMN Healthcare Data Platform Learning Project*
+*AMN Healthcare Data Platform Learning Project*
