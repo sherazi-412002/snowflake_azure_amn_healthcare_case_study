@@ -1,9 +1,5 @@
 # Building a Modern Healthcare Data Platform: A Multi-Cloud Modernization Journey with Azure, Snowflake, Power BI, and Terraform
 
-> **⚠️ Engineering Disclaimer & Project Scope:**  
-> This project is a comprehensive, hands-on **learning and educational data engineering case study** inspired by Snowflake's published customer modernization stories (specifically the public AMN Healthcare case study). All datasets used in this implementation are **synthetic, simulated, or public healthcare reference datasets** (CMS Hospital Quality Data and generated HR staffing records). The published outcomes (>100 GB/day, 1,176 replicated tables, 99.9% SLA, 93% cost reduction) are industry-verified reference benchmarks and architectural design goals, not claims of AMN Healthcare's proprietary production systems.
-
----
 
 ## 1. Introduction: Why Healthcare Talent Logistics Needs Modern Data Engineering
 
@@ -15,37 +11,13 @@ Every day, hospital emergency rooms, ICUs, and surgical wards face shifting pati
 3. **Scheduling & Shift Logistics:** Clinicians are placed into shifts, requiring real-time tracking of planned versus worked hours.
 4. **Payroll & Overtime Reconciliation:** Multi-state payroll calculations account for regular hours, overtime, stipends, and facility billing.
 
-When data systems are fragmented, hospitals experience unfilled shifts, clinician burnout increases, and organizations suffer millions in overtime leakage.
-
 ---
 
 ## 2. The Legacy Data Crisis: The "Before" Architecture
 
 Before data modernization, healthcare talent organizations frequently relied on legacy data lakes and hybrid on-premises data warehouses that created severe operational bottlenecks:
 
-```
-+-----------------------------------------------------------------------------------------+
-|                              LEGACY ARCHITECTURE BOTTLENECKS                            |
-+-----------------------------------------------------------------------------------------+
-|                                                                                         |
-|  1. OLTP Database Contention:                                                           |
-|     Analytical queries were executed directly against transactional EHR / VMS           |
-|     databases, causing row locks, API timeouts, and slow recruiter onboarding.          |
-|                                                                                         |
-|  2. Fragile Data Lake Infrastructure:                                                   |
-|     Complex Hadoop / legacy Spark cluster maintenance consumed extensive engineering   |
-|     hours for manual OS patching, cluster resizing, and failed node remediation.        |
-|                                                                                         |
-|  3. Overnight Batch Pipeline Latency:                                                   |
-|     Rigid overnight batch ETL meant reports were 24 to 48 hours out of date, making     |
-|     it impossible to react to intra-day hospital staffing surges.                       |
-|                                                                                         |
-|  4. Ballooning Infrastructure Costs:                                                    |
-|     Monolithic always-on clusters resulted in massive cloud bills (~$200,000 / month)   |
-|     with zero granular cost attribution across business units.                          |
-|                                                                                         |
-+-----------------------------------------------------------------------------------------+
-```
+![Legacy Architecture Bottlenecks & Problem Statement](problem1.jfif)
 
 ### The Published Reference Benchmark Target:
 * **Ingestion Scale:** > 100 GB / day written across 1,176 replicated tables.
@@ -60,52 +32,7 @@ Before data modernization, healthcare talent organizations frequently relied on 
 
 To address these challenges, we designed and built an enterprise-grade, multi-cloud data platform decoupling cloud ingestion and orchestration (**Microsoft Azure**) from high-concurrency elastic analytics (**Snowflake**), visual business intelligence (**Microsoft Power BI**), and declarative automation (**HashiCorp Terraform**).
 
-```
-+----------------------------------------------------------------------------------------------------+
-|                                    MODERN SOLUTION ARCHITECTURE                                    |
-+----------------------------------------------------------------------------------------------------+
-|                                                                                                    |
-|  [ DATA SOURCES ]                                                                                  |
-|  * CMS Hospital Reference CSV (5,432 facilities)                                                   |
-|  * Synthetic AMN HR Datasets (Candidates, Staffing Requests, Schedules, Payroll)                   |
-|  * Simulated Azure SQL Transactional Database (Real-time OLTP with Watermarks & Soft Deletes)      |
-|                                     |                                                              |
-|                                     v (BlobCreated Events / Event Grid / 2-Min Triggers)           |
-|  [ AZURE STORAGE LAYER ]                                                                           |
-|  * ADLS Gen2 Data Lake (landing | checkpoint | quarantine | archive)                               |
-|  * Temporary Blob SAS Staging Container (Optimized Snowflake Connector Handshake)                  |
-|                                     |                                                              |
-|                                     v (Serverless Orchestration & Copy Activity)                   |
-|  [ AZURE DATA FACTORY (ADF v2) ]                                                                   |
-|  * Dynamic File Router: PL_FILE_EVENT_ROUTER (Routes arriving CSVs based on canonical path)        |
-|  * Metadata-Driven Parent: PL_METADATA_INGEST (Queries CONTROL.INGESTION_CONFIG -> Parallel Copy)  |
-|  * Incremental CDC Pipelines: Watermark Extraction -> Delta Copy -> Stored Procedure Merge         |
-|  * Zero-Trust Security: System-Assigned Managed Identity + Azure Key Vault Secret References       |
-|                                     |                                                              |
-|                                     v (Staged COPY INTO / SQL Merge Stored Procedures)             |
-|  [ SNOWFLAKE CLOUD DATA WAREHOUSE (AMN_DEV) ]                                                      |
-|  +----------------------------------------------------------------------------------------------+  |
-|  |  RAW Schema: Append-only landing tables + Staging deltas + Ingestion metadata                |  |
-|  |       |                                                                                      |  |
-|  |       v (MERGE_* Procedures: Windowed Deduplication & Type Casting)                         |  |
-|  |  CURATED Schema: Validated, typed, deduplicated business entities (HOSPITALS, CANDIDATES...) |  |
-|  |       |                                                                                      |  |
-|  |       v (Kimball Dimensional Modeling & Fact Aggregations)                                   |  |
-|  |  MARTS Schema: Star Schema (DIM_HOSPITAL, DIM_CANDIDATE, DIM_DATE, FACT_*, VW_EXECUTIVE_KPIS) |  |
-|  |       ^                                                                                      |  |
-|  |  CONTROL Schema: Framework (INGESTION_CONFIG, PIPELINE_RUN_LOG, INGESTION_WATERMARK...)      |  |
-|  +----------------------------------------------------------------------------------------------+  |
-|  * Isolated Compute Warehouses: AMN_INGEST_WH | AMN_TRANSFORM_WH | AMN_BI_WH (60s Auto-Suspend)    |
-|                                     |                                                              |
-|                                     v (DirectQuery / Snowflake Connector / AMN_BI_ROLE)            |
-|  [ MICROSOFT POWER BI SUITE ]                                                                      |
-|  * 4 Interactive Dashboards: Executive Overview | Recruiting Funnel | Operations | Payroll/Health  |
-|                                                                                                    |
-|  [ OBSERVABILITY, DEVOPS & IAC ]                                                                   |
-|  * Observability: Azure Monitor Diagnostic Settings -> Log Analytics Workspace -> KQL & Alerts    |
-|  * Infrastructure as Code: HashiCorp Terraform (AzAPI + AzureRM Providers + Remote State Backend)  |
-+----------------------------------------------------------------------------------------------------+
-```
+![Modern Solution Architecture](architecture.png)
 
 ---
 
@@ -172,44 +99,7 @@ Let's break down each core technology used, how it works in this architecture, t
 
 ---
 
-## 5. Core Data Engineering Patterns & Mechanics
-
-### 5.1 Idempotent Windowed Merges
-To ensure zero duplicate records when backfilling or processing micro-batches, Snowflake stored procedures use deterministic windowing:
-
-```sql
-MERGE INTO AMN_DEV.CURATED.STAFFING_REQUESTS tgt
-USING (
-    SELECT 
-        REQUEST_ID, HOSPITAL_ID, REQUIRED_ROLE, DEPARTMENT,
-        REQUIRED_STAFF, FILLED_STAFF, HOURLY_RATE_USD, REQUEST_STATUS,
-        _BATCH_ID, _INGESTED_AT,
-        ROW_NUMBER() OVER (PARTITION BY REQUEST_ID ORDER BY _INGESTED_AT DESC) as rn
-    FROM AMN_DEV.RAW.STAFFING_REQUESTS
-    WHERE _BATCH_ID = :batch_id
-) src
-ON tgt.REQUEST_ID = src.REQUEST_ID AND src.rn = 1
-WHEN MATCHED THEN 
-    UPDATE SET 
-        tgt.REQUIRED_STAFF = src.REQUIRED_STAFF,
-        tgt.FILLED_STAFF = src.FILLED_STAFF,
-        tgt.REQUEST_STATUS = src.REQUEST_STATUS,
-        tgt.UPDATED_AT = CURRENT_TIMESTAMP()
-WHEN NOT MATCHED THEN 
-    INSERT (REQUEST_ID, HOSPITAL_ID, REQUIRED_ROLE, DEPARTMENT, REQUIRED_STAFF, FILLED_STAFF, HOURLY_RATE_USD, REQUEST_STATUS, CREATED_AT, UPDATED_AT)
-    VALUES (src.REQUEST_ID, src.HOSPITAL_ID, src.REQUIRED_ROLE, src.DEPARTMENT, src.REQUIRED_STAFF, src.FILLED_STAFF, src.HOURLY_RATE_USD, src.REQUEST_STATUS, CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
-```
-
-### 5.2 Watermark-Based Change Data Capture (CDC)
-1. Read current watermark from `CONTROL.INGESTION_WATERMARK`.
-2. Query Azure SQL for `MAX(LAST_MODIFIED_AT)` as the new watermark.
-3. Extract rows in window `(old_watermark, new_watermark]`.
-4. Copy delta to Snowflake staging table and execute merge.
-5. Advance watermark checkpoint in `CONTROL` **only after the merge succeeds**.
-
----
-
-## 6. Power BI Executive Dashboard Suite Showcase
+## 5. Power BI Executive Dashboard Suite Showcase
 
 The semantic model in `AMN_DEV.MARTS` powers a 4-page executive reporting suite:
 
@@ -239,19 +129,7 @@ The semantic model in `AMN_DEV.MARTS` powers a 4-page executive reporting suite:
 
 ---
 
-## 7. Real-World Engineering Battle Scars & Solutions
-
-| Challenge Encountered | Root Cause | Engineering Resolution |
-|:---|:---|:---|
-| **ADLS 403 Forbidden in Portal** | Azure Entra ID user had Control-Plane Contributor rights but lacked Data-Plane role. | Added `Storage Blob Data Contributor` role assignment via Terraform in `main.tf`. |
-| **Snowflake SQL Error: Invalid Identifier `ROWS_WRITTEN`** | Monitoring query referenced incorrect audit column name. | Aligned SQL queries to use `ROWS_INSERTED`, `ROWS_UPDATED`, and `ROWS_REJECTED` per `002_control_tables.sql`. |
-| **Azure SQL Connectivity Timeout** | Azure SQL firewall blocked Azure service connections and user was uninitialized. | Enabled `Allow Azure services to access this server` and corrected linked service credentials. |
-| **Incremental Procedure Column Mismatch** | Staging loaded `SPECIALTY` instead of `REQUIRED_ROLE` and `DEPARTMENT`. | Standardized delta schema and updated stored procedure mappings. |
-| **Power BI Template Blank Visuals** | `.pbit` template only carried theme metadata without bound visual containers. | Re-built report using native Power BI Project (`.pbip`) format with Tabular Model Definition Language (TMDL). |
-
----
-
-## 8. Summary & Key Takeaways for Data Engineers
+## 6. Summary & Key Takeaways for Data Engineers
 
 This case study highlights five vital lessons for building modern multi-cloud platforms:
 1. **Decouple Ingestion from Computation:** Let cloud-native serverless services (ADF) handle ingestion while elastic data warehouses (Snowflake) handle transformation and analytics.
@@ -259,6 +137,11 @@ This case study highlights five vital lessons for building modern multi-cloud pl
 3. **Idempotency Prevents Data Corruption:** Always design pipelines with deterministic windowing (`ROW_NUMBER`) and atomic merges.
 4. **Automate Infrastructure as Code:** Terraform ensures reproducible, auditable cloud environments and eliminates manual configuration drift.
 5. **DirectQuery Delivers True Real-Time Value:** DirectQuery over optimized dimensional marts provides instantaneous insights without the delay of scheduled imports.
+
+--- 
+
+> **⚠️ Engineering Disclaimer & Project Scope:**  
+> This project is a comprehensive, hands-on **learning and educational data engineering case study** inspired by Snowflake's published customer modernization stories (specifically the public AMN Healthcare case study). All datasets used in this implementation are **synthetic, simulated, or public healthcare reference datasets** (CMS Hospital Quality Data and generated HR staffing records). The published outcomes (>100 GB/day, 99.9% SLA, 93% cost reduction) are industry-verified reference benchmarks and architectural design goals, not claims of AMN Healthcare's proprietary production systems.
 
 ---
 *Published by the Data Engineering Team — AMN Healthcare Data Platform Learning Project*
